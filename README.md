@@ -1,7 +1,7 @@
 # FlatWice-FE
 > This is best app for rent
 
-![Status of the build](https://circleci.com/gh/Faradey27/FlatWice-FE.png?style=shield&circle-token=0994f0172044a105ab47567dc85e1cc3bc6c0f2e)
+![Status of the build](https://circleci.com/gh/Faradey27/FlatWice-FE.png?style=shield&circle-token=8e31470241d9317a51a5a6dba9cea10971141a5c)
 
 ---
 
