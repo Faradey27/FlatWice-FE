@@ -27,10 +27,14 @@ export default class AboutDriver {
     },
   };
 
+  is = {
+    ok: () => Boolean(typeof this.component === 'object' && Object.keys(this.component).length > 0),
+    headerRendered: () => this.component.find('[data-hook="headerBar"]'),
+    footerRendered: () => this.component.find('[data-hook="footerBar"]'),
+  }
+
   get = {
     initialProps: () => Home.getInitialProps(),
-    isOk: () => Boolean(typeof this.component === 'object' && Object.keys(this.component).length > 0),
-    text: () => this.component.text(),
     numberOfWidgets: () => this.component.find('[data-hook="home-widget"]').length,
   }
 }

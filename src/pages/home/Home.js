@@ -5,6 +5,9 @@ import { loadTranslations, init } from './../../i18n';
 import createStore from './../../data/redux/create';
 import { loadEntities, selectEntitiesByViewId } from './../../data/redux/modules/entities';
 
+import HeaderBar from './../../components/HeaderBar';
+import FooterBar from './../../components/FooterBar';
+
 const WIDGETS_VIEW_ID = 'WIDGETS';
 
 class Home extends Component {
@@ -29,7 +32,7 @@ class Home extends Component {
   render() {
     return (
       <div data-testid="homePage">
-        {this.l('Home Page')}
+        <HeaderBar/>
         {
           this.props.widgets.map((widget) => (
             <div
@@ -40,6 +43,7 @@ class Home extends Component {
             </div>
           ))
         }
+        <FooterBar />
       </div>
     );
   }

@@ -24,7 +24,7 @@ class I18n {
     this.inited = true;
   }
 
-  l = (text) => this.jed.gettext(text);
+  l = (text) => (this.jed ? this.jed.gettext(text) : text);
 }
 
 export default (

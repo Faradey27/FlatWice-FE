@@ -11,11 +11,15 @@ describe('Home Page', () => {
   });
 
   it('should render correctly', () => {
-    expect(driver.when.created().get.isOk()).toBeTruthy();
+    expect(driver.when.created().is.ok()).toBeTruthy();
   });
 
-  it('should render with correct text', () => {
-    expect(driver.when.created().get.text()).toBe('Home Page');
+  it('should render with header', () => {
+    expect(driver.when.created().is.headerRendered()).toBeTruthy();
+  });
+
+  it('should render with footer', () => {
+    expect(driver.when.created().is.footerRendered()).toBeTruthy();
   });
 
   it('getInitialProps should return localeData', async () => {
