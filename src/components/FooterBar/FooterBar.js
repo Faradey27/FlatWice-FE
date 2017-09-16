@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Link from 'next/link';
+import Link from '../Link';
 import { l } from './../../i18n';
 
 import Button from './../Button';
