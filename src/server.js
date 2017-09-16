@@ -19,6 +19,7 @@ app.prepare().
     server.use(compression());
 
     server.use('/assets/locales', express.static(path.join(__dirname, '/assets/locales')));
+    server.get('/api/v1/flats', (req, res) => res.status(200).json(require('./mocks/flatsList.json')));
     server.use(handlerForCustomRoutes);
 
     server.get('*', (req, res) => handle(req, res));
