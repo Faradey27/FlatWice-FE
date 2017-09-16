@@ -1,19 +1,19 @@
 import { mount } from 'enzyme';
-import About from './../index';
+import Career from './../index';
 import { mockLocales } from './../../../../__test__/utils/mockedAxios';
 
 const localeData = {
   en: require('./../../../assets/locales/en.json'),
 };
 
-export default class AboutDriver {
+export default class CareerDriver {
   constructor() {
     mockLocales();
   }
 
   when = {
     created: (props) => {
-      this.component = mount(<About
+      this.component = mount(<Career
         localeData={localeData}
         {...props}
       />);
@@ -23,7 +23,7 @@ export default class AboutDriver {
   };
 
   get = {
-    initialProps: () => About.getInitialProps(),
+    initialProps: () => Career.getInitialProps(),
   }
 
   is = {

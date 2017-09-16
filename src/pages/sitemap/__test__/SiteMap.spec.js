@@ -1,13 +1,13 @@
 /* eslint-disable fp/no-mutation */
 /* eslint-disable fp/no-let */
 
-import AboutDriver from './About.driver';
+import SiteMapDriver from './SiteMap.driver';
 
-describe('About Page', () => {
+describe('SiteMap Page', () => {
   let driver = null;
 
   beforeEach(() => {
-    driver = new AboutDriver();
+    driver = new SiteMapDriver();
   });
 
   it('should render correctly', () => {

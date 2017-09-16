@@ -1,13 +1,13 @@
 /* eslint-disable fp/no-mutation */
 /* eslint-disable fp/no-let */
 
-import AboutDriver from './About.driver';
+import CareerDriver from './Career.driver';
 
-describe('About Page', () => {
+describe('Career Page', () => {
   let driver = null;
 
   beforeEach(() => {
-    driver = new AboutDriver();
+    driver = new CareerDriver();
   });
 
   it('should render correctly', () => {

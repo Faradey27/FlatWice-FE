@@ -7,7 +7,7 @@ import createStore from './../../data/redux/create';
 import HeaderBar from './../../components/HeaderBar';
 import FooterBar from './../../components/FooterBar';
 
-class About extends Component {
+class Help extends Component {
   static propTypes = {
     localeData: object, // from async request in getInitialProps
   }
@@ -34,4 +34,4 @@ class About extends Component {
   }
 }
 
-export default withRedux(createStore, null, null)(About);
+export default withRedux(createStore, null, null)(Help);

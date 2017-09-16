@@ -1,13 +1,13 @@
 /* eslint-disable fp/no-mutation */
 /* eslint-disable fp/no-let */
 
-import AboutDriver from './About.driver';
+import HelpDriver from './Help.driver';
 
-describe('About Page', () => {
+describe('Help Page', () => {
   let driver = null;
 
   beforeEach(() => {
-    driver = new AboutDriver();
+    driver = new HelpDriver();
   });
 
   it('should render correctly', () => {

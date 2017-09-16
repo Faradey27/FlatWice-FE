@@ -1,3 +1,5 @@
+import Link from './../Link';
+
 const LogoSvg = (
   <svg
     height="36"
@@ -25,8 +27,10 @@ const LogoSvg = (
 );
 
 export default () => (
-  <div data-testid="logo">
-    <div>{LogoSvg}</div>
-    <span>{'FlatWice'}</span>
-  </div>
+  <Link href="/">
+    <div data-testid="logo">
+      <div>{LogoSvg}</div>
+      <span>{'FlatWice'}</span>
+    </div>
+  </Link>
 );

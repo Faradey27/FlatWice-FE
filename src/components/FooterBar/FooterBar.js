@@ -28,7 +28,7 @@ class FooterBar extends Component {
             {l('Career')}
           </Button>
         </Link>
-        <Link href="/siteMap">
+        <Link href="/sitemap">
           <Button onClick={this.handleSignUp}>
             {l('Site map')}
           </Button>

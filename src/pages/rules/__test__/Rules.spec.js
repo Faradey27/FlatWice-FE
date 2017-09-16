@@ -1,13 +1,13 @@
 /* eslint-disable fp/no-mutation */
 /* eslint-disable fp/no-let */
 
-import AboutDriver from './About.driver';
+import RulesDriver from './Rules.driver';
 
-describe('About Page', () => {
+describe('Rules Page', () => {
   let driver = null;
 
   beforeEach(() => {
-    driver = new AboutDriver();
+    driver = new RulesDriver();
   });
 
   it('should render correctly', () => {
