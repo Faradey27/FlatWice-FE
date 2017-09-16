@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Some great place",
+    "price": "4500",
+    "currency": "$",
+    "author": {
+      "name": "Some author",
+      "phoneNumber": "2222",
+      "email": "2222@g.com"
+    },
+    "createdAt": "123",
+    "updatedAt": "123",
+    "location": {
+      "x": 1,
+      "y": 1,
+      "adress": {
+        "country": "UA",
+        "city": "Kiev",
+        "street": "best street",
+        "house": "24"
+      }
+    },
+    "shortDescription": "Some great place",
+    "categories": ["rent"],
+    "tags": ["tag1"],
+    "photos": [],
+    "videos": []
+  },
+  {
+    "id": 2,
+    "title": "Some great place",
+    "price": "4500",
+    "currency": "$",
+    "author": {
+      "name": "Some author",
+      "phoneNumber": "2222",
+      "email": "2222@g.com"
+    },
+    "createdAt": "123",
+    "updatedAt": "123",
+    "location": {
+      "x": 1,
+      "y": 1,
+      "adress": {
+        "country": "UA",
+        "city": "Kiev",
+        "street": "best street",
+        "house": "24"
+      }
+    },
+    "shortDescription": "Some great place",
+    "categories": ["rent"],
+    "tags": ["tag1"],
+    "photos": [],
+    "videos": []
+  }
+]

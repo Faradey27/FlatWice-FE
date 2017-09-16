@@ -6,6 +6,7 @@ module.exports = (wallaby) => ({
     { pattern: 'src/.next/*.*', ignore: true },
     { pattern: 'src/next.config.js', ignore: true },
     { pattern: 'src/server.js', ignore: true },
+    { pattern: 'src/routes.js', ignore: true },
     'src/**/*.js*',
     '__test__/utils/mockedStore.js',
     '__test__/utils/mockedAxios.js',

@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const HOST = 'http://localhost:3000';
+import { HOST } from './../constants/data';
 
 const sendRequest = ({ method, endpoint, body }) => axios[method](HOST + endpoint, body).then((res) => res.data);
 

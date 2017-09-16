@@ -1,5 +1,6 @@
 import mock from './../../../__test__/utils/mockedAxios';
-import ajax, { HOST } from './../ajax';
+import ajax from './../../utils/ajax';
+import { HOST } from './../../constants/data';
 
 describe.only('Ajax', () => {
   beforeEach(() => {

@@ -11,7 +11,7 @@ import CardsLayer from './../../components/CardsLayer';
 import FooterBar from './../../components/FooterBar';
 import FlatMap from './../../components/FlatMap';
 
-const FLATS_VIEW_ID = 'FLATS';
+import { FLATS_VIEW_ID, FLATS_ENDPOINT } from './../../constants/data';
 
 class Home extends Component {
   static propTypes = {
@@ -20,7 +20,7 @@ class Home extends Component {
   }
 
   static async getInitialProps({ store }) {
-    store.dispatch(loadEntities({ viewId: FLATS_VIEW_ID }));
+    store.dispatch(loadEntities({ viewId: FLATS_VIEW_ID, endpoint: FLATS_ENDPOINT }));
     const localeData = await loadTranslations();
 
     return { localeData };

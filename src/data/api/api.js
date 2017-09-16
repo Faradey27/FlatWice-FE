@@ -1,5 +1,7 @@
+import ajax from './../../utils/ajax';
+
 class Api {
-  get = () => Promise.resolve([{ id: 1 }, { id: 2 }]);
+  get = (url) => ajax.get(url);
 }
 
 export default (new Api());

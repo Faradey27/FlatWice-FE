@@ -3,9 +3,12 @@ const next = require('next');
 const compression = require('compression');
 const path = require('path');
 
+const routes = require('./routes');
+
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dir: __dirname, dev });
 const handle = app.getRequestHandler();
+const handlerForCustomRoutes = routes.getRequestHandler(app);
 
 const DEFAULT_PORT = 3000;
 
@@ -16,6 +19,8 @@ app.prepare().
     server.use(compression());
 
     server.use('/assets/locales', express.static(path.join(__dirname, '/assets/locales')));
+    server.use(handlerForCustomRoutes);
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(DEFAULT_PORT, (err) => {
