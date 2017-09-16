@@ -9,6 +9,7 @@ import HeaderBar from './../../components/HeaderBar';
 import MainFiltersArea from './../../components/MainFiltersArea';
 import CardsLayer from './../../components/CardsLayer';
 import FooterBar from './../../components/FooterBar';
+import FlatMap from './../../components/FlatMap';
 
 const FLATS_VIEW_ID = 'FLATS';
 
@@ -39,6 +40,7 @@ class Home extends Component {
         <CardsLayer
           cards={this.props.flats}
         />
+        <FlatMap />
         <FooterBar />
       </div>
     );
