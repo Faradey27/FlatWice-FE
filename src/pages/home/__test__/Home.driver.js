@@ -35,6 +35,6 @@ export default class AboutDriver {
 
   get = {
     initialProps: () => Home.getInitialProps(),
-    numberOfWidgets: () => this.component.find('[data-hook="home-widget"]').length,
+    numberOfFlats: () => this.component.find('[data-testid="card"]').length,
   }
 }

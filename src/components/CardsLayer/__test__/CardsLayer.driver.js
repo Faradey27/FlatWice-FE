@@ -15,4 +15,8 @@ export default class CardsLayerDriver {
   is = {
     ok: () => this.component.find('[data-testid="cardsLayer"]').length,
   }
+
+  get = {
+    numberOfCards: () => this.component.find('[data-testid="card"]').length,
+  }
 }

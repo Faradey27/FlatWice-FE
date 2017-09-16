@@ -10,16 +10,16 @@ import MainFiltersArea from './../../components/MainFiltersArea';
 import CardsLayer from './../../components/CardsLayer';
 import FooterBar from './../../components/FooterBar';
 
-const WIDGETS_VIEW_ID = 'WIDGETS';
+const FLATS_VIEW_ID = 'FLATS';
 
 class Home extends Component {
   static propTypes = {
+    flats: array,
     localeData: object, // from async request in getInitialProps
-    widgets: array,
   }
 
   static async getInitialProps({ store }) {
-    store.dispatch(loadEntities({ viewId: WIDGETS_VIEW_ID }));
+    store.dispatch(loadEntities({ viewId: FLATS_VIEW_ID }));
     const localeData = await loadTranslations();
 
     return { localeData };
@@ -36,17 +36,9 @@ class Home extends Component {
       <div data-testid="homePage">
         <HeaderBar/>
         <MainFiltersArea />
-        <CardsLayer />
-        {
-          this.props.widgets.map((widget) => (
-            <div
-              data-hook="home-widget"
-              key={widget.id}
-            >
-              {widget.id}
-            </div>
-          ))
-        }
+        <CardsLayer
+          cards={this.props.flats}
+        />
         <FooterBar />
       </div>
     );
@@ -56,7 +48,7 @@ class Home extends Component {
 export default withRedux(
   createStore,
   (state) => ({
-    widgets: selectEntitiesByViewId(state, WIDGETS_VIEW_ID),
+    flats: selectEntitiesByViewId(state, FLATS_VIEW_ID),
   }),
   { loadEntities }
 )(Home);

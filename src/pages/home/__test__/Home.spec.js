@@ -26,12 +26,12 @@ describe('Home Page', () => {
     expect((await driver.get.initialProps()).initialProps.localeData.data.locale_data.messages['Home Page']).toEqual(['']);
   });
 
-  it('should render widgets with data from server(nextjs)', (done) => {
-    const EXPECTED_NUMBER_OF_WIDGETS = 2;
+  it('should render flats with data from server(nextjs)', (done) => {
+    const EXPECTED_NUMBER_OF_FLATS = 2;
 
     driver.when.created().when.doServerDataLoad();
     setTimeout(() => {
-      expect(driver.get.numberOfWidgets()).toBe(EXPECTED_NUMBER_OF_WIDGETS);
+      expect(driver.get.numberOfFlats()).toBe(EXPECTED_NUMBER_OF_FLATS);
       done();
     });
   });
