@@ -6,6 +6,8 @@ import createStore from './../../data/redux/create';
 import { loadEntities, selectEntitiesByViewId } from './../../data/redux/modules/entities';
 
 import HeaderBar from './../../components/HeaderBar';
+import MainFiltersArea from './../../components/MainFiltersArea';
+import CardsLayer from './../../components/CardsLayer';
 import FooterBar from './../../components/FooterBar';
 
 const WIDGETS_VIEW_ID = 'WIDGETS';
@@ -33,6 +35,8 @@ class Home extends Component {
     return (
       <div data-testid="homePage">
         <HeaderBar/>
+        <MainFiltersArea />
+        <CardsLayer />
         {
           this.props.widgets.map((widget) => (
             <div
