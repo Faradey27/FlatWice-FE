@@ -4,6 +4,8 @@ import { object } from 'prop-types';
 import { loadTranslations, init } from './../../i18n';
 import createStore from './../../data/redux/create';
 
+import resetStyles from './../../assets/resetStyles';
+
 import HeaderBar from './../../components/HeaderBar';
 import FooterBar from './../../components/FooterBar';
 
@@ -29,6 +31,7 @@ class About extends Component {
       <div>
         <HeaderBar/>
         <FooterBar/>
+        {resetStyles}
       </div>
     );
   }

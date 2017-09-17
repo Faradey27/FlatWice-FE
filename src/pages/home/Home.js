@@ -5,6 +5,8 @@ import { loadTranslations, init } from './../../i18n';
 import createStore from './../../data/redux/create';
 import { loadEntities, selectEntitiesByViewId } from './../../data/redux/modules/entities';
 
+import resetStyles from './../../assets/resetStyles';
+
 import HeaderBar from './../../components/HeaderBar';
 import MainFiltersArea from './../../components/MainFiltersArea';
 import CardsLayer from './../../components/CardsLayer';
@@ -42,6 +44,7 @@ class Home extends Component {
         />
         <FlatMap />
         <FooterBar />
+        {resetStyles}
       </div>
     );
   }

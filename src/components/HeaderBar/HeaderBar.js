@@ -8,7 +8,10 @@ import ActionButton from './../ActionButton';
 class HeaderBar extends Component {
   render() {
     return (
-      <div data-testid="headerBar">
+      <div
+        className="headerBar"
+        data-testid="headerBar"
+      >
         <div>
           <Logo />
         </div>
@@ -23,6 +26,15 @@ class HeaderBar extends Component {
             {l('Lease apartment')}
           </ActionButton>
         </div>
+        <style jsx>
+          {`
+            .headerBar {
+              display: flex;
+              height: 60px;
+              box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            }
+          `}
+        </style>
       </div>
     );
   }
