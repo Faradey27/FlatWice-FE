@@ -5,12 +5,9 @@ import { loadTranslations, init } from './../../i18n';
 import createStore from './../../data/redux/create';
 import { loadEntities, selectEntitiesByViewId } from './../../data/redux/modules/entities';
 
-import resetStyles from './../../assets/resetStyles';
-
-import HeaderBar from './../../components/HeaderBar';
+import MainLayout from './../../layouts/MainLayout';
 import MainFiltersArea from './../../components/MainFiltersArea';
 import CardsLayer from './../../components/CardsLayer';
-import FooterBar from './../../components/FooterBar';
 import FlatMap from './../../components/FlatMap';
 
 import { FLATS_VIEW_ID, FLATS_ENDPOINT } from './../../constants/data';
@@ -36,16 +33,15 @@ class Home extends Component {
 
   render() {
     return (
-      <div data-testid="homePage">
-        <HeaderBar/>
-        <MainFiltersArea />
-        <CardsLayer
-          cards={this.props.flats}
-        />
-        <FlatMap />
-        <FooterBar />
-        {resetStyles}
-      </div>
+      <MainLayout>
+        <div data-testid="homePage">
+          <MainFiltersArea />
+          <CardsLayer
+            cards={this.props.flats}
+          />
+          <FlatMap />
+        </div>
+      </MainLayout>
     );
   }
 }

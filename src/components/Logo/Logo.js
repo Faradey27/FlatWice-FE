@@ -28,9 +28,25 @@ const LogoSvg = (
 
 export default () => (
   <Link href="/">
-    <div data-testid="logo">
+    <div
+      className="logo"
+      data-testid="logo"
+    >
       <div>{LogoSvg}</div>
-      <span>{'FlatWice'}</span>
+      <span className="logo-text">{'FlatWice'}</span>
+      <style jsx>
+        {`
+          .logo {
+            display: flex;
+            align-items: center;
+          }
+          .logo-text {
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 22px;
+          }
+        `}
+      </style>
     </div>
   </Link>
 );
