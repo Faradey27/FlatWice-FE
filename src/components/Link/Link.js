@@ -10,7 +10,10 @@ class LinkWrap extends Component {
 
   render() {
     return (
-      <Link href={this.props.href}>
+      <Link
+        href={this.props.href}
+        prefetch={process.env.NODE_ENV === 'production'}
+      >
         {this.props.children}
       </Link>
     );

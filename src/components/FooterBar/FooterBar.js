@@ -7,24 +7,39 @@ import Button from './../Button';
 class FooterBar extends Component {
   render() {
     return (
-      <div data-testid="footerBar">
+      <div
+        className="footer"
+        data-testid="footerBar"
+      >
         <Link href="/about">
-          <Button onClick={this.handleSignUp}>
+          <Button
+            withMarginRight
+            onClick={this.handleSignUp}
+          >
             {l('About us')}
           </Button>
         </Link>
         <Link href="/help">
-          <Button onClick={this.handleSignUp}>
+          <Button
+            withMarginRight
+            onClick={this.handleSignUp}
+          >
             {l('Help')}
           </Button>
         </Link>
         <Link href="/rules">
-          <Button onClick={this.handleSignUp}>
+          <Button
+            withMarginRight
+            onClick={this.handleSignUp}
+          >
             {l('Rules')}
           </Button>
         </Link>
         <Link href="/career">
-          <Button onClick={this.handleSignUp}>
+          <Button
+            withMarginRight
+            onClick={this.handleSignUp}
+          >
             {l('Career')}
           </Button>
         </Link>
@@ -33,6 +48,19 @@ class FooterBar extends Component {
             {l('Site map')}
           </Button>
         </Link>
+        <style jsx>
+          {`
+            .footer {
+              display: flex;
+              align-items: center;
+              height: 60px;
+              border-top: 1px solid #e4e4e4;
+              margin-top: 48px;
+              margin-left: 24px;
+              margin-right: 24px;
+            }
+          `}
+        </style>
       </div>
     );
   }

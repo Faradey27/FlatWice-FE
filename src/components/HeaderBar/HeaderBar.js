@@ -16,10 +16,16 @@ class HeaderBar extends Component {
           <Logo />
         </div>
         <div>
-          <Button onClick={this.handleSignUp}>
+          <Button
+            withMarginRight
+            onClick={this.handleSignUp}
+          >
             {l('Sign up')}
           </Button>
-          <Button onClick={this.handleLogIn}>
+          <Button
+            withMarginRight
+            onClick={this.handleLogIn}
+          >
             {l('Log in')}
           </Button>
           <ActionButton onClick={this.handleLeaseApartment}>
@@ -32,6 +38,7 @@ class HeaderBar extends Component {
             .headerBar {
               display: flex;
               align-items: center;
+              justify-content: space-between;
               height: 60px;
               padding: 0 10px;
               box-shadow: var(--boxShadow);

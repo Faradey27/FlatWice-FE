@@ -30,6 +30,16 @@ class MainLayout extends Component {
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
               font-weight: 300;
               color: var(--defaultColor);
+              min-width: 600px;
+            }
+
+            button, input {
+              outline: none;
+              font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                          "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+              font-weight: 300;
+              color: var(--defaultColor);
+              line-height: 1.2;
             }
           `}
         </style>
