@@ -36,6 +36,8 @@ export default () => (
       <span className="logo-text">{'FlatWice'}</span>
       <style jsx>
         {`
+          @import "theme.css";
+
           .logo {
             display: flex;
             align-items: center;
@@ -44,6 +46,7 @@ export default () => (
             margin-left: 10px;
             font-weight: 700;
             font-size: 22px;
+            color: var(--primaryColor);
           }
         `}
       </style>

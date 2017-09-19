@@ -28,12 +28,13 @@ class HeaderBar extends Component {
         </div>
         <style jsx>
           {`
+            @import 'theme.css';
             .headerBar {
               display: flex;
               align-items: center;
               height: 60px;
               padding: 0 10px;
-              box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+              box-shadow: var(--boxShadow);
             }
           `}
         </style>
