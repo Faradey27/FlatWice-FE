@@ -4,17 +4,18 @@ import { bool, func, element, oneOfType, string } from 'prop-types';
 class Button extends Component {
   static propTypes = {
     children: oneOfType([element, string]),
+    dataTestId: string,
     withMarginRight: bool,
     onClick: func,
   }
 
   render() {
-    const { withMarginRight } = this.props;
+    const { dataTestId, withMarginRight } = this.props;
 
     return (
       <button
         className={`button ${withMarginRight ? 'marginRight' : ''}`}
-        data-testid="button"
+        data-testid={dataTestId || 'button'}
         onClick={this.props.onClick}
       >
         {this.props.children}

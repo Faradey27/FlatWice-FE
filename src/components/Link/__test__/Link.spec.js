@@ -1,6 +1,5 @@
 /* eslint-disable fp/no-mutation */
 /* eslint-disable fp/no-let */
-// import { spy } from 'sinon';
 import LinkDriver from './Link.driver';
 
 describe('Link', () => {

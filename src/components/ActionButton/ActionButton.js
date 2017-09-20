@@ -4,6 +4,7 @@ import { func, element, string, oneOfType } from 'prop-types';
 class ActionButton extends Component {
   static propTypes = {
     children: oneOfType([element, string]),
+    dataTestId: string,
     onClick: func,
   }
 
@@ -11,7 +12,7 @@ class ActionButton extends Component {
     return (
       <button
         className="action-button"
-        data-testid="actionButton"
+        data-testid={this.props.dataTestId || 'actionButton'}
         onClick={this.props.onClick}
       >
         {this.props.children}

@@ -4,8 +4,27 @@ import { l } from './../../i18n';
 import Logo from './../Logo';
 import Button from './../Button';
 import ActionButton from './../ActionButton';
+import Modal from './../Modal';
 
 class HeaderBar extends Component {
+  state = {
+    isOpen: false,
+  }
+
+  handleSignUp = () => this.setState({ isOpen: true, modalType: 'signUp' })
+  handleLogIn = () => this.setState({ isOpen: true, modalType: 'logIn' })
+
+  handleModalClose = () => this.setState({ isOpen: false })
+
+  renderModalBody() {
+    const hash = {
+      signUp: () => <div data-testid="signUpModal" />,
+      logIn: () => <div data-testid="logInModal" />,
+    };
+
+    return hash[this.state.modalType] ? hash[this.state.modalType]() : null;
+  }
+
   render() {
     return (
       <div
@@ -17,21 +36,32 @@ class HeaderBar extends Component {
         </div>
         <div>
           <Button
+            dataTestId="signUp"
             withMarginRight
             onClick={this.handleSignUp}
           >
             {l('Sign up')}
           </Button>
           <Button
+            dataTestId="logIn"
             withMarginRight
             onClick={this.handleLogIn}
           >
             {l('Log in')}
           </Button>
-          <ActionButton onClick={this.handleLeaseApartment}>
+          <ActionButton
+            dataTestId="leaseApartment"
+            onClick={this.handleLeaseApartment}
+          >
             {l('Lease apartment')}
           </ActionButton>
         </div>
+        <Modal
+          isOpen={this.state.isOpen}
+          onRequestClose={this.handleModalClose}
+        >
+          {this.renderModalBody()}
+        </Modal>
         <style jsx>
           {`
             @import 'theme.css';
