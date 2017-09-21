@@ -25,6 +25,11 @@ export default class HeaderBarDriver {
 
       return this;
     },
+    clickOnCloseIcon: () => {
+      this.component.find('[data-testid="modalHeaderCloseIcon"]').simulate('click');
+
+      return this;
+    },
   };
 
   is = {

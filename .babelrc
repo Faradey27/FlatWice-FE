@@ -1,4 +1,5 @@
 {
+  "plugins": ["inline-react-svg"],
   "env": {
     "development": {
       "presets": "./babel-preset"

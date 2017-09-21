@@ -46,7 +46,7 @@ module.exports = (wallaby) => ({
   setup: (target) => {
     target.testFramework.configure({
       moduleNameMapper: {
-        '^.+\\.(jpg|jpeg|png|gif|svg)$': './test/utils/fileMock.js',
+        '^.+\\.(jpg|jpeg|png|gif|svg)$': path.resolve(__dirname, 'test/utils/fileMock.js'),
       },
     });
   },

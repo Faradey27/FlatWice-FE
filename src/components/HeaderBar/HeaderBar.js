@@ -5,6 +5,8 @@ import Logo from './../Logo';
 import Button from './../Button';
 import ActionButton from './../ActionButton';
 import Modal from './../Modal';
+import ModalHeader from './../ModalHeader';
+import ModalContent from './../ModalContent';
 
 class HeaderBar extends Component {
   state = {
@@ -60,7 +62,10 @@ class HeaderBar extends Component {
           isOpen={this.state.isOpen}
           onRequestClose={this.handleModalClose}
         >
-          {this.renderModalBody()}
+          <ModalContent>
+            <ModalHeader onRequestClose={this.handleModalClose}/>
+            {this.renderModalBody()}
+          </ModalContent>
         </Modal>
         <style jsx>
           {`

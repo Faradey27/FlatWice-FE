@@ -25,4 +25,9 @@ describe('HeaderBar', () => {
     expect(driver.when.created().when.clickLogIn().is.logInModalOpened()).toBeTruthy();
     expect(driver.when.clickOnOverlay().is.logInModalOpened()).toBeFalsy();
   });
+
+  it('should open logIn modal on logIn button and close it on close icon click', () => {
+    expect(driver.when.created().when.clickLogIn().is.logInModalOpened()).toBeTruthy();
+    expect(driver.when.clickOnCloseIcon().is.logInModalOpened()).toBeFalsy();
+  });
 });
