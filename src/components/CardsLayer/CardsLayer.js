@@ -1,17 +1,52 @@
 import { array } from 'prop-types';
+import Card from './../Card';
 
 const CardsLayer = ({ cards }) => (
-  <div data-testid="cardsLayer">
-    {
-      cards.map((card) => (
-        <div
-          data-testid="card"
-          key={card.id}
-        >
-          {card.id}
-        </div>
-      ))
-    }
+  <div className="cardsLayerWrapper">
+    <div
+      className="cardsLayer"
+      data-testid="cardsLayer"
+    >
+      {
+        cards.map((card) => (
+          <Card
+            cardData={card}
+            key={card.id}
+          />
+        ))
+      }
+    </div>
+    <style jsx>
+      {`
+        @import 'theme.css';
+        .cardsLayer {
+          display: grid;
+          grid-template-columns: calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px);
+          grid-gap: 36px;
+          justify-items: center;
+          width: 100%;
+          max-width: 1246px;
+          padding: 0 60px;
+        }
+        @media (--medium-viewport) {
+          .cardsLayer {
+            grid-template-columns: calc(50% - 18px) calc(50% - 18px);
+          }
+        }
+        @media (--small-viewport) {
+          .cardsLayer {
+            grid-template-columns: 100%;
+            padding: 0 36px;
+          }
+        }
+        .cardsLayerWrapper {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+      `}
+    </style>
   </div>
 );
 

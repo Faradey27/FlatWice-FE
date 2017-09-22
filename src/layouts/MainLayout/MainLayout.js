@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { node } from 'prop-types';
+import Head from 'next/head';
 import HeaderBar from './../../components/HeaderBar';
 import FooterBar from './../../components/FooterBar';
 
@@ -13,6 +14,18 @@ class MainLayout extends Component {
 
     return (
       <div data-testid="mainLayout">
+        <Head>
+          <link
+            href="/static/favicon.png"
+            rel="icon"
+            type="image/png"
+          />
+          <meta
+            content="width=device-width, initial-scale=1"
+            name="viewport"
+          />
+          <title>{'FlatWice'}</title>
+        </Head>
         <HeaderBar/>
         {children}
         <FooterBar />
@@ -30,7 +43,7 @@ class MainLayout extends Component {
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
               font-weight: 300;
               color: var(--defaultColor);
-              min-width: 724px;
+              min-width: 300px;
             }
 
             button, input {

@@ -27,7 +27,7 @@ describe('Home Page', () => {
   });
 
   it('should render flats with data from server(nextjs)', (done) => {
-    const EXPECTED_NUMBER_OF_FLATS = 2;
+    const EXPECTED_NUMBER_OF_FLATS = 5;
 
     driver.when.created().when.doServerDataLoad();
     setTimeout(() => {

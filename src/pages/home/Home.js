@@ -34,7 +34,10 @@ class Home extends Component {
   render() {
     return (
       <MainLayout>
-        <div data-testid="homePage">
+        <div
+          className="homePage"
+          data-testid="homePage"
+        >
           <MainFiltersArea />
           <CardsLayer
             cards={this.props.flats}
