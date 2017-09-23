@@ -24,6 +24,7 @@
     "shortDescription": "Some great place",
     "categories": ["rent"],
     "tags": ["tag1"],
+    "mainPhoto": "https://olxua-ring12.akamaized.net/images_slandocomua/533571298_1_1000x700_kvartira-posutochno-bulvar-lesi-ukrainki-11-kiev.jpg",
     "photos": [],
     "videos": []
   },
@@ -52,6 +53,7 @@
     "shortDescription": "Some great place",
     "categories": ["rent"],
     "tags": ["tag1"],
+    "mainPhoto": "https://olxua-ring04.akamaized.net/images_slandocomua/530563262_1_644x461_zhk-vremena-goda-2kkvartira-ul-kudryashova-20bez-komissii-kiev_rev021.jpg",
     "photos": [],
     "videos": []
   },
@@ -80,6 +82,7 @@
     "shortDescription": "Some great place",
     "categories": ["rent"],
     "tags": ["tag1"],
+    "mainPhoto": "https://olxua-ring04.akamaized.net/images_slandocomua/533566132_1_644x461_shikarnaya-2k-kvartira-dragomanova-2-poznyaki-kiev.jpg",
     "photos": [],
     "videos": []
   },
@@ -108,6 +111,7 @@
     "shortDescription": "Some great place",
     "categories": ["rent"],
     "tags": ["tag1"],
+    "mainPhoto": "https://olxua-ring01.akamaized.net/images_slandocomua/533561444_5_644x461_super-kvartira-1k-s-remontom-nachalo-prslobozhanskiy-prpravdy-dnepropetrovskaya-oblast.jpg",
     "photos": [],
     "videos": []
   },
@@ -136,6 +140,7 @@
     "shortDescription": "Some great place",
     "categories": ["rent"],
     "tags": ["tag1"],
+    "mainPhoto": "https://olxua-ring12.akamaized.net/images_slandocomua/533571298_1_1000x700_kvartira-posutochno-bulvar-lesi-ukrainki-11-kiev.jpg",
     "photos": [],
     "videos": []
   }
