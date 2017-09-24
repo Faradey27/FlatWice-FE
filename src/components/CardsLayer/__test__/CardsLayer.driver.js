@@ -17,6 +17,6 @@ export default class CardsLayerDriver {
   }
 
   get = {
-    numberOfCards: () => this.component.find('[data-testid="card"]').length,
+    numberOfCards: () => this.component.find('[data-testid="flat-card"]').length,
   }
 }

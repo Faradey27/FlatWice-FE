@@ -1,5 +1,5 @@
 import { array } from 'prop-types';
-import Card from './../Card';
+import FlatCard from './../FlatCard';
 
 const CardsLayer = ({ cards }) => (
   <div className="cardsLayerWrapper">
@@ -9,7 +9,7 @@ const CardsLayer = ({ cards }) => (
     >
       {
         cards.map((card) => (
-          <Card
+          <FlatCard
             cardData={card}
             key={card.id}
           />

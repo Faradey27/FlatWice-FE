@@ -36,6 +36,6 @@ export default class AboutDriver {
 
   get = {
     initialProps: () => Home.getInitialProps(),
-    numberOfFlats: () => this.component.find('[data-testid="card"]').length,
+    numberOfFlats: () => this.component.find('[data-testid="flat-card"]').length,
   }
 }
