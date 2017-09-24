@@ -1,7 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Some great place",
+    "title": {
+      "default": "Classical Apartment on Royal Mile"
+    },
     "price": "4500",
     "currency": "$",
     "author": {
