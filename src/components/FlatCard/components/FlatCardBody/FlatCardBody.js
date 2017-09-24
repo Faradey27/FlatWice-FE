@@ -11,7 +11,7 @@ const FlatCardBody = () => (
       {`
         .card-body {
           width: 100%;
-          padding: 16px 30px 0 30px;
+          padding: 10px 30px 0 30px;
         }
         .card-body-title {
           font-size: 20px;
