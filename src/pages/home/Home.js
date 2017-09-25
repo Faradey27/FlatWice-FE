@@ -19,7 +19,7 @@ class Home extends Component {
   }
 
   static async getInitialProps({ store }) {
-    store.dispatch(loadEntities({ viewId: FLATS_VIEW_ID, endpoint: FLATS_ENDPOINT }));
+    store.dispatch(loadEntities({ from: 0, to: 5, viewId: FLATS_VIEW_ID, endpoint: FLATS_ENDPOINT }));
     const localeData = await loadTranslations();
 
     return { localeData };

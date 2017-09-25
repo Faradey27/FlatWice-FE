@@ -2,7 +2,7 @@ import mock from './../../../__test__/utils/mockedAxios';
 import ajax from './../../utils/ajax';
 import { HOST } from './../../constants/data';
 
-describe.only('Ajax', () => {
+describe('Ajax', () => {
   beforeEach(() => {
     mock.
       onGet(`${HOST}/users`).reply(200, { id: 1 }).

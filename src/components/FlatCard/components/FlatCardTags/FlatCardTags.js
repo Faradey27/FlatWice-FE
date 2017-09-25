@@ -1,11 +1,18 @@
-const FlatCardTags = () => (
+import { string, arrayOf } from 'prop-types';
+import { l } from './../../../../i18n';
+
+const FlatCardTags = ({ tags }) => (
   <div className="card-tags-body">
-    <div className="card-tags-title">{'Tags: '}</div>
+    <div className="card-tags-title">{l('Tags: ')}</div>
     <div className="card-tags">
-      <div className="card-tag">{'Center'}</div>
-      <div className="card-tag">{'flat'}</div>
-      <div className="card-tag">{'owner'}</div>
-      <div className="card-tag">{'owner'}</div>
+      {tags.map((tag) => (
+        <div
+          className="card-tag"
+          key={tag}
+        >
+          {tag}
+        </div>
+      ))}
     </div>
     <style jsx>
       {`
@@ -39,5 +46,13 @@ const FlatCardTags = () => (
     </style>
   </div>
 );
+
+FlatCardTags.defaultProps = { // eslint-disable-line
+  tags: [],
+};
+
+FlatCardTags.propTypes = {
+  tags: arrayOf(string),
+};
 
 export default FlatCardTags;

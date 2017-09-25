@@ -19,7 +19,11 @@ app.prepare().
     server.use(compression());
 
     server.use('/assets/locales', express.static(path.join(__dirname, '/assets/locales')));
-    server.get('/api/v1/flats', (req, res) => res.status(200).json(require('./mocks/flatsList.json')));
+    server.get('/api/v1/flats', (req, res) => {
+      const generator = require('./mocks/flatListGenerator.js');
+
+      res.status(200).json(generator.generate(req.query.to || Number('5')));
+    });
     server.use(handlerForCustomRoutes);
 
     server.get('*', (req, res) => handle(req, res));

@@ -1,12 +1,9 @@
-const FlatCardBody = () => (
+import { string } from 'prop-types';
+
+const FlatCardBody = ({ shortDescription }) => (
   <div className="card-body">
     <span className="card-body-title">{'Classical Apartment on Royal Mile'}</span>
-    <p className="card-body-description">{`
-        Cair Paravel Farmstead transports you into another realm. Come experience
-        living in a round structure filled with amenities-
-        fully equipped kitchen, deep tub, heating and AC, shared hot tub and seasonal salt water pool.
-        fully equipped kitchen, deep tub, heating and AC, shared hot tub and seasonal salt water pool.
-      `}</p>
+    <p className="card-body-description">{shortDescription}</p>
     <style jsx>
       {`
         .card-body {
@@ -32,5 +29,9 @@ const FlatCardBody = () => (
     </style>
   </div>
 );
+
+FlatCardBody.propTypes = {
+  shortDescription: string,
+};
 
 export default FlatCardBody;

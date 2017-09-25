@@ -1,6 +1,7 @@
+import { shape, string, number } from 'prop-types';
 import Remember from './imgs/Remember.svg';
 
-const FlatCardFooter = () => (
+const FlatCardFooter = ({ author, updatedAt }) => (
   <div className="card-footer">
     <div className="card-footer-body">
       <div className="card-footer-author">
@@ -9,8 +10,8 @@ const FlatCardFooter = () => (
           src="https://cdn-images-1.medium.com/fit/c/80/80/1*c9lYbCK1CYenT88M-2WicA.png"
         />
         <div className="card-footer-author-group">
-          <span className="card-footer-author-name">{'The Economist'}</span>
-          <span className="card-footer-date">{'20 minutes ago'}</span>
+          <span className="card-footer-author-name">{author.name}</span>
+          <span className="card-footer-date">{updatedAt}</span>
         </div>
       </div>
     </div>
@@ -62,5 +63,18 @@ const FlatCardFooter = () => (
     </style>
   </div>
 );
+
+FlatCardFooter.defaultProps = { // eslint-disable-line
+  author: {
+    name: 'Anonymos',
+  },
+};
+
+FlatCardFooter.propTypes = {
+  author: shape({
+    name: string,
+  }),
+  updatedAt: number,
+};
 
 export default FlatCardFooter;

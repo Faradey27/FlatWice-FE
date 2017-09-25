@@ -22,7 +22,7 @@ describe('SiteMap Page', () => {
     expect(driver.when.created().is.footerRendered()).toBeTruthy();
   });
 
-  it('getInitialProps should return localeData', async () => {
+  it('Site map: getInitialProps should return localeData', async () => {
     expect((await driver.get.initialProps()).initialProps.localeData.data.locale_data.messages['Home Page']).toEqual(['']);
   });
 });

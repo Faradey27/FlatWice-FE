@@ -10,9 +10,12 @@ const FlatCard = ({ cardData }) => (
     data-testid="flat-card"
   >
     <FlatCardHeader mainPhoto={cardData.mainPhoto} />
-    <FlatCardBody />
-    <FlatCardTags />
-    <FlatCardFooter />
+    <FlatCardBody shortDescription={cardData.shortDescription}/>
+    <FlatCardTags tags={cardData.tags}/>
+    <FlatCardFooter
+      author={cardData.author}
+      updatedAt={cardData.updatedAt}
+    />
     <style jsx>
       {`
         @import 'theme.css';

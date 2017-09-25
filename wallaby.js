@@ -7,6 +7,7 @@ module.exports = (wallaby) => ({
     { pattern: 'src/next.config.js', ignore: true },
     { pattern: 'src/server.js', ignore: true },
     { pattern: 'src/routes.js', ignore: true },
+    { pattern: 'src/mocks/flatListGenerator.js', instrument: false },
     'src/**/*.js*',
     '__test__/utils/mockedStore.js',
     '__test__/utils/mockedAxios.js',
@@ -44,6 +45,8 @@ module.exports = (wallaby) => ({
 
 
   setup: (target) => {
+    const path = require('path');
+
     target.testFramework.configure({
       moduleNameMapper: {
         '^.+\\.(jpg|jpeg|png|gif|svg)$': path.resolve(__dirname, 'test/utils/fileMock.js'),

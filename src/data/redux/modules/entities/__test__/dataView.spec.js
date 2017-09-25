@@ -1,5 +1,6 @@
 import { getStore } from './../../../../../../__test__/utils/mockedStore';
 import { mockFlats } from './../../../../../../__test__/utils/mockedAxios';
+import { FLATS_ENDPOINT } from './../../../../../constants/data';
 import reducer, { loadEntities, LOAD_ENTITIES_START, LOAD_ENTITIES_SUCCESS, LOAD_ENTITIES_FAILURE } from './../index';
 
 describe('Check that redux store is created correctly and dataView module works', () => {
@@ -17,17 +18,17 @@ describe('Check that redux store is created correctly and dataView module works'
     });
 
     it('should correctly dispatch action and update reducer', () => {
-      mockFlats();
+      const flats = mockFlats();
       const store = getStore();
 
-      return store.dispatch(loadEntities({ viewId: 'WIDGETS', endpoint: '/api/v1/flats' })).then(() => {
+      return store.dispatch(loadEntities({ viewId: 'WIDGETS', endpoint: `${FLATS_ENDPOINT}`, from: 0, to: 5 })).then(() => {
         expect(store.getActions()).toEqual([
           {
             meta: { viewId: 'WIDGETS' },
             type: 'LOAD_ENTITIES_START' },
           {
             meta: { viewId: 'WIDGETS' },
-            payload: require('./../../../../../mocks/flatsList.json'),
+            payload: flats,
             type: 'LOAD_ENTITIES_SUCCESS',
           },
         ]);
