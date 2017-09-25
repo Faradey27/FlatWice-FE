@@ -35,7 +35,7 @@ describe('Time', () => {
 
       expect(getTimeAgoLabel(Date.now() - ONE_HOUR)).toBe(`1${message}`);
       expect(getTimeAgoLabel(Date.now() - TWO_HOUR)).toBe(`2${message}`);
-      expect(getTimeAgoLabel(Date.now() - TWO_HOUR * 2)).toBe(`4${message}`);
+      expect(getTimeAgoLabel(Date.now() - TWO_HOUR * '2')).toBe(`4${message}`);
       expect(getTimeAgoLabel(Date.now() - MORE_HOUR)).not.toContain(message);
     });
 
