@@ -1,4 +1,5 @@
 import { shape, string, number } from 'prop-types';
+import { getTimeAgoLabel } from './../../../../utils/time';
 import Remember from './imgs/Remember.svg';
 
 const FlatCardFooter = ({ author, updatedAt }) => (
@@ -7,11 +8,11 @@ const FlatCardFooter = ({ author, updatedAt }) => (
       <div className="card-footer-author">
         <img
           className="card-footer-avatar"
-          src="https://cdn-images-1.medium.com/fit/c/80/80/1*c9lYbCK1CYenT88M-2WicA.png"
+          src={author.avatar}
         />
         <div className="card-footer-author-group">
           <span className="card-footer-author-name">{author.name}</span>
-          <span className="card-footer-date">{updatedAt}</span>
+          <span className="card-footer-date">{getTimeAgoLabel(updatedAt)}</span>
         </div>
       </div>
     </div>

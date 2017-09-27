@@ -100,6 +100,12 @@ const PHOTOS = [
   'https://olxua-ring12.akamaized.net/images_slandocomua/534124516_4_1000x700_zdayu-1-kmnatnu-tsentr-vroremont-ukomplektovana-nedvizhimost.jpg',
 ];
 
+const AVATARS = [
+  'http://agar-balkan.ga/public/images/favicon/apple-icon-72x72.png',
+  'http://homefixer.co.za/wp-content/uploads/2011/05/images-150x150.png',
+  'http://www.netteask.com/avatar/18.jpg',
+];
+
 const selectRandomElementFromArr = (arr) => {
   const index = Math.floor(Math.random() * arr.length);
 
@@ -130,6 +136,7 @@ const generate = (count) => {
       currency: 'грн',
       currencyLabel: 'грн',
       author: {
+        avatar: selectRandomElementFromArr(AVATARS),
         name: selectRandomElementFromArr(NAMES),
         phoneNumber: selectRandomElementFromArr(NUMBERS),
         email: selectRandomElementFromArr(EMAIL),

@@ -1,3 +1,5 @@
+import { l } from './../i18n';
+
 const TIME_STEP = 60;
 const HOURS_IN_DAY = 24;
 const DAYS_IN_WEEK = 7;
@@ -18,20 +20,20 @@ export const getTimeAgoLabel = (timestamp) => {
     return (new Date(timestamp)).toLocaleDateString();
   }
   if (diff <= ONE_YEAR && diff > ONE_MONTH) {
-    return `${Math.floor(diff / (DAYS_IN_MONTH * ONE_DAY))} months ago`;
+    return `${Math.floor(diff / (DAYS_IN_MONTH * ONE_DAY))} ${l('months ago')}`;
   }
   if (diff <= ONE_MONTH && diff > ONE_WEEK) {
-    return `${Math.floor(diff / (DAYS_IN_WEEK * ONE_DAY))} weeks ago`;
+    return `${Math.floor(diff / (DAYS_IN_WEEK * ONE_DAY))} ${l('weeks ago')}`;
   }
   if (diff <= ONE_WEEK && diff > ONE_DAY) {
-    return `${Math.floor(diff / (HOURS_IN_DAY * ONE_HOUR))} days ago`;
+    return `${Math.floor(diff / (HOURS_IN_DAY * ONE_HOUR))} ${l('days ago')}`;
   }
   if (diff <= ONE_DAY && diff > ONE_HOUR) {
-    return `${Math.floor(diff / (TIME_STEP * ONE_MINUTE))} hours ago`;
+    return `${Math.floor(diff / (TIME_STEP * ONE_MINUTE))} ${l('hours ago')}`;
   }
   if (diff <= ONE_HOUR && diff > ONE_MINUTE) {
-    return `${Math.floor(diff / (TIME_STEP * ONE_SECOND))} minutes ago`;
+    return `${Math.floor(diff / (TIME_STEP * ONE_SECOND))} ${l('minutes ago')}`;
   }
 
-  return 'just now';
+  return l('just now');
 };
