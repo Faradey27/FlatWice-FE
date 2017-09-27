@@ -9,7 +9,7 @@ const ModalHeader = ({ onRequestClose }) => (
     <div
       className="modalHeaderCloseIcon"
       data-testid="modalHeaderCloseIcon"
-      tabIndex={1}
+      tabIndex={0}
       onClick={onRequestClose}
     >
       <CloseIcon />
