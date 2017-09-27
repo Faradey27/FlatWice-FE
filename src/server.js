@@ -11,6 +11,7 @@ const handle = app.getRequestHandler();
 const handlerForCustomRoutes = routes.getRequestHandler(app);
 
 const DEFAULT_PORT = 3000;
+const port = process.env.PORT || DEFAULT_PORT;
 
 app.prepare().
   then(() => {
@@ -28,9 +29,9 @@ app.prepare().
 
     server.get('*', (req, res) => handle(req, res));
 
-    server.listen(DEFAULT_PORT, (err) => {
+    server.listen(port, (err) => {
       if (err) throw err;
-      console.info('> Ready on http://localhost:3000');
+      console.info(`> Ready on http://localhost:${port}`);
     });
 
     return server;
