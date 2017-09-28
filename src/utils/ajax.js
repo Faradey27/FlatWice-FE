@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { HOST } from './../constants/data';
+import { getHost } from './../constants/data';
 
-const sendRequest = ({ method, endpoint, body }) => axios[method](HOST + endpoint, body).then((res) => res.data);
+const sendRequest = ({ method, endpoint, body }) => axios[method](getHost() + endpoint, body).then((res) => res.data);
 
 export default {
   get: (endpoint) => sendRequest({ method: 'get', endpoint }),

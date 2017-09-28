@@ -1,12 +1,12 @@
 import mock from './../../../__test__/utils/mockedAxios';
 import ajax from './../../utils/ajax';
-import { HOST } from './../../constants/data';
+import { getHost } from './../../constants/data';
 
 describe('Ajax', () => {
   beforeEach(() => {
     mock.
-      onGet(`${HOST}/users`).reply(200, { id: 1 }).
-      onPost(`${HOST}/users`).
+      onGet(`${getHost()}/users`).reply(200, { id: 1 }).
+      onPost(`${getHost()}/users`).
       reply(200, { id: 2 });
   });
 
