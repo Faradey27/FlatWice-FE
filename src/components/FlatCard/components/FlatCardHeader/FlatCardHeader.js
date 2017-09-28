@@ -1,10 +1,11 @@
 import { string } from 'prop-types';
+import Img from './../../../Img';
 import ArrowLeft from './imgs/ArrowLeft.svg';
 import ArrowRight from './imgs/ArrowRight.svg';
 
 const FlatCardHeader = ({ mainPhoto }) => (
   <div className="card-header">
-    <img
+    <Img
       height="100%"
       src={mainPhoto}
       width="100%"

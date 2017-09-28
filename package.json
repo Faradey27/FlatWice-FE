@@ -7,7 +7,7 @@
     "dev": "node src/server.js",
     "start": "npm run build && npm run start:server",
     "start:prod": "npm run build && npm run start:forever",
-    "start:forever": "cross-env NODE_ENV=production PORT=80 forever start src/server.js",
+    "start:forever": "cross-env NODE_ENV=production forever start src/server.js",
     "start:server": "cross-env NODE_ENV=production node src/server.js",
     "build": "next build src",
     "lint": "eslint -c .eslintrc .",

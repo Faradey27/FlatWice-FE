@@ -1,16 +1,45 @@
-import { string } from 'prop-types';
+import { string, object } from 'prop-types';
+import { Component } from 'react';
 
-const Img = ({ src, alt }) => (
-  <img
-    alt={alt}
-    data-testid="image"
-    src={src}
-  />
-);
+const PLACEHOLDER = `
+  data:image/png;base64,
+  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAnUlEQVR42u3RAQkAAAgDMN8frKw1RLYKS3VPcUaEC
+  EGIEIQIQYgQhAgRIgQhQhAiBCFCECIEIQgRghAhCBGCECEIQYgQhAhBiBCECEEIQoQgRAhChCBECEIQIgQhQhAiBCF
+  CEIIQIQgRghAhCBGCEIQIQYgQhAhBiBCEIEQIQoQgRAhChCAEIUIQIgQhQhAiBCFChAhBiBCECEHIdwuwddLxdxELtAAAAABJRU5ErkJggg==
+`;
 
-Img.propTypes = {
-  alt: string.isRequired,
-  src: string.isRequired,
-};
+class Img extends Component {
+  static propTypes = {
+    alt: string.isRequired,
+    height: string,
+    src: string.isRequired,
+    style: object,
+    width: string,
+  }
+
+  componentDidMount() {
+    this.imgNode.src = this.props.src;
+  }
+
+  setImgNode = (node) => {
+    this.imgNode = node;
+  }
+
+  render() {
+    const { height, width, alt, style } = this.props;
+
+    return (
+      <img
+        alt={alt}
+        data-testid="image"
+        height={height}
+        ref={this.setImgNode}
+        src={PLACEHOLDER}
+        style={style}
+        width={width}
+      />
+    );
+  }
+}
 
 export default Img;

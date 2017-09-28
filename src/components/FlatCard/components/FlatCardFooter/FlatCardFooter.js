@@ -1,14 +1,20 @@
 import { shape, string, number } from 'prop-types';
 import { getTimeAgoLabel } from './../../../../utils/time';
+import Img from './../../../Img';
 import Remember from './imgs/Remember.svg';
 
 const FlatCardFooter = ({ author, updatedAt }) => (
   <div className="card-footer">
     <div className="card-footer-body">
       <div className="card-footer-author">
-        <img
-          className="card-footer-avatar"
+        <Img
           src={author.avatar}
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: 20,
+            marginRight: 10,
+          }}
         />
         <div className="card-footer-author-group">
           <span className="card-footer-author-name">{author.name}</span>
@@ -32,12 +38,6 @@ const FlatCardFooter = ({ author, updatedAt }) => (
           align-items: center;
           width: 100%;
           margin-bottom: 10px;
-        }
-        .card-footer-avatar {
-          width: 40px;
-          height: 40px;
-          border-radius: 20px;
-          margin-right: 10px;
         }
         .card-footer-author {
           display: flex;
