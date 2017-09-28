@@ -24,6 +24,7 @@ module.exports = {
     config.plugins.push(new webpack.IgnorePlugin(/__test__/));
     config.plugins.push(new webpack.DefinePlugin({
       'process.env.PORT': JSON.stringify(process.env.PORT),
+      'process.env.HOST': JSON.stringify(process.env.HOST),
     }));
 
     return config;
