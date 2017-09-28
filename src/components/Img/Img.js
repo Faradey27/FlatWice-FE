@@ -10,11 +10,15 @@ const PLACEHOLDER = `
 
 class Img extends Component {
   static propTypes = {
-    alt: string.isRequired,
+    alt: string,
     height: string,
     src: string.isRequired,
     style: object,
     width: string,
+  }
+
+  static defaultProps = {
+    alt: '',
   }
 
   componentDidMount() {

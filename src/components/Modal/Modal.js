@@ -32,7 +32,8 @@ class Modal extends Component {
     const { isOpen, children } = this.props;
 
     if (!isOpen) {
-      return null;
+      // TODO should return null after https://github.com/airbnb/enzyme/issues/1163 fixed
+      return <div style={{ position: 'fixed', top: 0, left: 0 }}/>;
     }
 
     return (

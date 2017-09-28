@@ -3,6 +3,13 @@
 
 import ImgDriver from './Img.driver';
 
+const PLACEHOLDER = `
+  data:image/png;base64,
+  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAnUlEQVR42u3RAQkAAAgDMN8frKw1RLYKS3VPcUaEC
+  EGIEIQIQYgQhAgRIgQhQhAiBCFCECIEIQgRghAhCBGCECEIQYgQhAhBiBCECEEIQoQgRAhChCBECEIQIgQhQhAiBCF
+  CEIIQIQgRghAhCBGCEIQIQYgQhAhBiBCEIEQIQoQgRAhChCAEIUIQIgQhQhAiBCFChAhBiBCECEHIdwuwddLxdxELtAAAAABJRU5ErkJggg==
+`;
+
 describe('Img', () => {
   let driver = null;
 
@@ -15,7 +22,7 @@ describe('Img', () => {
   });
 
   it('should render correctly with alt and src', () => {
-    expect(driver.when.created({ src: '123', alt: '222' }).get.src()).toBe('123');
+    expect(driver.when.created({ src: '123', alt: '222' }).get.src()).toBe(PLACEHOLDER);
     expect(driver.get.alt()).toBe('222');
   });
 });

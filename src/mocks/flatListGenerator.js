@@ -91,19 +91,19 @@ const TAGS = [
 ];
 
 const PHOTOS = [
-  'https://olxua-ring04.akamaized.net/images_slandocomua/533566132_1_644x461_shikarnaya-2k-kvartira-dragomanova-2-poznyaki-kiev.jpg',
-  'https://olxua-ring12.akamaized.net/images_slandocomua/533571298_1_1000x700_kvartira-posutochno-bulvar-lesi-ukrainki-11-kiev.jpg',
-  'https://olxua-ring04.akamaized.net/images_slandocomua/534123692_12_1000x700_novostroy-zhk-magnat-tsentr-na-pr-yavornitskogo-kvartira-3-k-.jpg',
-  'https://olxua-ring09.akamaized.net/images_slandocomua/458053304_1_1000x700_sovremennaya-kvartira-s-pochasovoy-oplatoy-v-samom-tsentre-odessa.jpg',
-  'https://olxua-ring11.akamaized.net/images_slandocomua/507714764_1_1000x700_svobodna-segodnya-2-h-komnatnaya-kiev.jpg',
-  'https://olxua-ring12.akamaized.net/images_slandocomua/533571298_1_1000x700_kvartira-posutochno-bulvar-lesi-ukrainki-11-kiev.jpg',
-  'https://olxua-ring12.akamaized.net/images_slandocomua/534124516_4_1000x700_zdayu-1-kmnatnu-tsentr-vroremont-ukomplektovana-nedvizhimost.jpg',
+  '/static/imgs/flats/flat1.jpg',
+  '/static/imgs/flats/flat2.jpg',
+  '/static/imgs/flats/flat3.jpg',
+  '/static/imgs/flats/flat4.jpg',
+  '/static/imgs/flats/flat5.jpg',
+  '/static/imgs/flats/flat6.jpg',
+  '/static/imgs/flats/flat7.jpg',
 ];
 
 const AVATARS = [
-  'http://agar-balkan.ga/public/images/favicon/apple-icon-72x72.png',
-  'http://homefixer.co.za/wp-content/uploads/2011/05/images-150x150.png',
-  'http://www.netteask.com/avatar/18.jpg',
+  '/static/imgs/avatars/avatar1.jpg',
+  '/static/imgs/avatars/avatar2.jpg',
+  '/static/imgs/avatars/avatar3.jpg',
 ];
 
 const selectRandomElementFromArr = (arr) => {

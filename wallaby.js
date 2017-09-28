@@ -1,7 +1,7 @@
 module.exports = (wallaby) => ({
   files: [
     'src/**/*.json',
-    { pattern: 'test/**/*.spec.js', ignore: true },
+    { pattern: '__test__/beforeTest.js', instrument: false },
     { pattern: 'src/**/*.spec.js', ignore: true },
     { pattern: 'src/.next/*.*', ignore: true },
     { pattern: 'src/next.config.js', ignore: true },
@@ -46,12 +46,13 @@ module.exports = (wallaby) => ({
 
   setup: (target) => {
     const path = require('path');
+    const jestConfig = require('./package.json').jest;
 
-    target.testFramework.configure({
+    target.testFramework.configure(Object.assign({}, jestConfig, {
       moduleNameMapper: {
         '^.+\\.(jpg|jpeg|png|gif|svg)$': path.resolve(__dirname, 'test/utils/fileMock.js'),
       },
-    });
+    }));
   },
 
   env: {
