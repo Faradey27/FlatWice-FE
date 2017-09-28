@@ -22,6 +22,9 @@ module.exports = {
 
     config.plugins.push(new ProgressBarPlugin());
     config.plugins.push(new webpack.IgnorePlugin(/__test__/));
+    config.plugins.push(new webpack.DefinePlugin({
+      'process.env.PORT': JSON.stringify(process.env.port)
+    }));
 
     return config;
   },
