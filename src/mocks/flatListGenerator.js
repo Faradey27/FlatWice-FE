@@ -83,11 +83,11 @@ const SHORT_DESC = [
 ];
 
 const TAGS = [
-  ['киев', 'центр'],
-  ['чернигов', 'smart квартира', 'новострой'],
-  ['львов', 'smart квартира', 'большой дом'],
-  ['киев', 'маленькая', 'комната'],
-  ['киев', '3', 'комната'],
+  ['киев', 'печерск'],
+  ['чернигов', 'массаны'],
+  ['львов', 'центр'],
+  ['киев'],
+  ['киев'],
 ];
 
 const PHOTOS = [
@@ -133,6 +133,8 @@ const generate = (count) => {
       id: uuid(),
       title: selectRandomElementFromArr(TITLES),
       price: Math.floor((Math.random() + 1) * 4200), // eslint-disable-line
+      numberOfRooms: Math.floor(Math.random() * 4) + 1,
+      apartmentArea: Math.floor(Math.random() * 150),
       currency: 'грн',
       currencyLabel: 'грн',
       author: {

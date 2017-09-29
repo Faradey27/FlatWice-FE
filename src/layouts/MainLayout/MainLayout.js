@@ -53,6 +53,7 @@ class MainLayout extends Component {
               font-weight: 300;
               color: var(--defaultColor);
               line-height: 1.2;
+              padding: 0;
             }
           `}
         </style>

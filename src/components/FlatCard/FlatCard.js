@@ -11,7 +11,11 @@ const FlatCard = ({ cardData }) => (
   >
     <FlatCardHeader mainPhoto={cardData.mainPhoto} />
     <FlatCardBody shortDescription={cardData.shortDescription}/>
-    <FlatCardTags tags={cardData.tags}/>
+    <FlatCardTags
+      apartmentArea={cardData.apartmentArea}
+      numberOfRooms={cardData.numberOfRooms}
+      tags={cardData.tags}
+    />
     <FlatCardFooter
       author={cardData.author}
       updatedAt={cardData.updatedAt}

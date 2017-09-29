@@ -1,10 +1,15 @@
-import { string, arrayOf } from 'prop-types';
+import { string, number, arrayOf } from 'prop-types';
 import { l } from './../../../../i18n';
 
-const FlatCardTags = ({ tags }) => (
+const FlatCardTags = ({ tags, numberOfRooms, apartmentArea }) => (
   <div className="card-tags-body">
-    <div className="card-tags-title">{l('Tags: ')}</div>
     <div className="card-tags">
+      <div className="card-tag">
+        {numberOfRooms}{' '}{l('rooms')}
+      </div>
+      <div className="card-tag">
+        {apartmentArea}{' '}{l('m^2')}
+      </div>
       {tags.map((tag) => (
         <div
           className="card-tag"
@@ -52,6 +57,8 @@ FlatCardTags.defaultProps = { // eslint-disable-line
 };
 
 FlatCardTags.propTypes = {
+  apartmentArea: number,
+  numberOfRooms: number,
   tags: arrayOf(string),
 };
 

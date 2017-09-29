@@ -13,6 +13,13 @@ const FlatCardBody = ({ shortDescription }) => (
         .card-body-title {
           font-size: 20px;
           font-weight: 700;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-height: 1.5rem;
+          max-height: 6rem;
         }
         .card-body-description {
           overflow: hidden;
