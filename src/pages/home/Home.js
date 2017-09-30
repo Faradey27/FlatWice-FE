@@ -12,6 +12,8 @@ import FlatMap from './../../components/FlatMap';
 
 import { FLATS_VIEW_ID, FLATS_ENDPOINT } from './../../constants/data';
 
+import styles from './HomeStyles';
+
 class Home extends Component {
   static propTypes = {
     flats: array,
@@ -51,30 +53,7 @@ class Home extends Component {
           />
           <FlatMap />
         </div>
-        <style jsx>
-          {`
-            .homePage {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              width: 100%;
-            }
-            .title {
-              width: 100%;
-              font-size: 48px;
-              padding-bottom: 30px;
-              padding: 0 60px;
-              max-width: 1246px;
-              padding-bottom: 30px;
-            }
-            .layer {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              width: 100%;
-            }
-          `}
-        </style>
+        <style jsx>{styles}</style>
       </MainLayout>
     );
   }

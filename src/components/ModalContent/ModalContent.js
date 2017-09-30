@@ -1,4 +1,5 @@
 import { node } from 'prop-types';
+import styles from './ModalContentStyles';
 
 const ModalContent = ({ children }) => (
   <div
@@ -6,19 +7,7 @@ const ModalContent = ({ children }) => (
     data-testid="modalContent"
   >
     {children}
-    <style jsx>
-      {`
-        @import 'theme.css';
-        .modalContent {
-          display: flex;
-          width: 540px;
-          height: 370px;
-          padding: 30px;
-          background-color: var(--white);
-          box-shadow: var(--boxShadow);
-        }
-      `}
-    </style>
+    <style jsx>{styles}</style>
   </div>
 );
 

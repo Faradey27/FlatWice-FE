@@ -1,4 +1,5 @@
 import Link from './../Link';
+import styles from './LogoStyles';
 
 export default () => (
   <Link href="/">
@@ -33,27 +34,7 @@ export default () => (
         </svg>
       </div>
       <span className="logo-text">{'FlatWice'}</span>
-      <style jsx>
-        {`
-          @import "theme.css";
-
-          .logo-svg {
-            fill: var(--primaryColor);;
-          }
-
-          .logo {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-          }
-          .logo-text {
-            margin-left: 10px;
-            font-weight: 700;
-            font-size: 22px;
-            color: var(--primaryColor);
-          }
-        `}
-      </style>
+      <style jsx>{styles}</style>
     </div>
   </Link>
 );

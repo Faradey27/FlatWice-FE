@@ -3,6 +3,7 @@ import { node } from 'prop-types';
 import Head from 'next/head';
 import HeaderBar from './../../components/HeaderBar';
 import FooterBar from './../../components/FooterBar';
+import theme from './../../assets/theme';
 
 class MainLayout extends Component {
   static propTypes = {
@@ -34,15 +35,13 @@ class MainLayout extends Component {
           jsx
         >
           {`
-            @import "theme.css";
-
             body, html {
               margin: 0;
               padding: 0;
               font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
               font-weight: 300;
-              color: var(--defaultColor);
+              color: ${theme.defaultColor};
               min-width: 300px;
             }
 
@@ -51,7 +50,7 @@ class MainLayout extends Component {
               font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
               font-weight: 300;
-              color: var(--defaultColor);
+              color: ${theme.defaultColor};
               line-height: 1.2;
               padding: 0;
             }

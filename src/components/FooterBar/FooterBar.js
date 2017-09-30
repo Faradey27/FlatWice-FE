@@ -3,6 +3,7 @@ import Link from '../Link';
 import { l } from './../../i18n';
 
 import Button from './../Button';
+import styles from './FooterBarStyles';
 
 class FooterBar extends Component {
   render() {
@@ -48,19 +49,7 @@ class FooterBar extends Component {
             {l('Site map')}
           </Button>
         </Link>
-        <style jsx>
-          {`
-            .footer {
-              display: flex;
-              align-items: center;
-              height: 60px;
-              border-top: 1px solid #e4e4e4;
-              margin-top: 48px;
-              margin-left: 24px;
-              margin-right: 24px;
-            }
-          `}
-        </style>
+        <style jsx>{styles}</style>
       </div>
     );
   }

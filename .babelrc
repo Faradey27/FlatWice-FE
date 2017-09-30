@@ -2,10 +2,10 @@
   "plugins": ["inline-react-svg"],
   "env": {
     "development": {
-      "presets": "./babel-preset"
+      "presets": "next/babel"
     },
     "production": {
-      "presets": "./babel-preset"
+      "presets": "next/babel"
     },
     "test": {
       "presets": [

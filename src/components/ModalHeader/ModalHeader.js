@@ -1,5 +1,6 @@
 import { func } from 'prop-types';
 import CloseIcon from './imgs/Close.svg';
+import styles from './ModalHeaderStyles';
 
 const ModalHeader = ({ onRequestClose }) => (
   <div
@@ -14,25 +15,7 @@ const ModalHeader = ({ onRequestClose }) => (
     >
       <CloseIcon />
     </div>
-    <style jsx>
-      {`
-        .modalHeader {
-          display: flex;
-          align-items: flex-start;
-          justify-content: flex-end;
-          height: 40px;
-          width: 100%;
-        }
-        .modalHeaderCloseIcon {
-          width: 20px;
-          height: 20px;
-          cursor: pointer;
-        }
-        .modalHeaderCloseIcon:hover {
-          opacity: 0.8;
-        }
-      `}
-    </style>
+    <style jsx>{styles}</style>
   </div>
 );
 

@@ -7,6 +7,7 @@ import ActionButton from './../ActionButton';
 import Modal from './../Modal';
 import ModalHeader from './../ModalHeader';
 import ModalContent from './../ModalContent';
+import styles from './HeaderBarStyles';
 
 class HeaderBar extends Component {
   state = {
@@ -67,19 +68,7 @@ class HeaderBar extends Component {
             {this.renderModalBody()}
           </ModalContent>
         </Modal>
-        <style jsx>
-          {`
-            @import 'theme.css';
-            .headerBar {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              height: 60px;
-              padding: 0 10px;
-              box-shadow: var(--boxShadow);
-            }
-          `}
-        </style>
+        <style jsx>{styles}</style>
       </div>
     );
   }
