@@ -1,11 +1,12 @@
 import { Component } from 'react';
-import { func, element, string, oneOfType } from 'prop-types';
+import { func, element, number, string, oneOfType } from 'prop-types';
 import styles from './ActionButtonStyles';
 
 class ActionButton extends Component {
   static propTypes = {
     children: oneOfType([element, string]),
     dataTestId: string,
+    marginLeft: number,
     theme: string,
     onClick: func,
   }
@@ -15,6 +16,7 @@ class ActionButton extends Component {
       <button
         className={`action-button ${this.props.theme}`}
         data-testid={this.props.dataTestId || 'actionButton'}
+        style={{ marginLeft: this.props.marginLeft }}
         onClick={this.props.onClick}
       >
         {this.props.children}

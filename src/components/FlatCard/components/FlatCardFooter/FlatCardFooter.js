@@ -1,7 +1,7 @@
 import { shape, string, number } from 'prop-types';
 import { getTimeAgoLabel } from './../../../../utils/time';
 import Img from './../../../Img';
-import Remember from './imgs/Remember.svg';
+import Remember from './../../../../assets/icons/Remember.svg';
 
 const FlatCardFooter = ({ author, updatedAt }) => (
   <div className="card-footer">

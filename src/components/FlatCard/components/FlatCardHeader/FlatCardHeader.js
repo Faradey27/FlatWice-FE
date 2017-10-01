@@ -1,7 +1,7 @@
 import { string } from 'prop-types';
 import Img from './../../../Img';
-import ArrowLeft from './imgs/ArrowLeft.svg';
-import ArrowRight from './imgs/ArrowRight.svg';
+import ArrowLeft from './../../../../assets/icons/ArrowLeft.svg';
+import ArrowRight from './../../../../assets/icons/ArrowRight.svg';
 
 const FlatCardHeader = ({ mainPhoto }) => (
   <div className="card-header">

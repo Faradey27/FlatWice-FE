@@ -1,5 +1,5 @@
 import { func } from 'prop-types';
-import CloseIcon from './imgs/Close.svg';
+import CloseIcon from './../../assets/icons/Close.svg';
 import styles from './ModalHeaderStyles';
 
 const ModalHeader = ({ onRequestClose }) => (
