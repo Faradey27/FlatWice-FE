@@ -7,6 +7,7 @@ import ActionButton from './../ActionButton';
 import Modal from './../Modal';
 import ModalHeader from './../ModalHeader';
 import ModalContent from './../ModalContent';
+import SignUpModal from './../SignUpModal';
 import styles from './HeaderBarStyles';
 
 class HeaderBar extends Component {
@@ -21,7 +22,7 @@ class HeaderBar extends Component {
 
   renderModalBody() {
     const hash = {
-      signUp: () => <div data-testid="signUpModal" />,
+      signUp: () => <SignUpModal />,
       logIn: () => <div data-testid="logInModal" />,
     };
 

@@ -1,10 +1,10 @@
-import { string, boolean } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { Component } from 'react';
 import styles from './InputStyles';
 
 class Input extends Component {
   static propTypes = {
-    focusOnMount: boolean,
+    focusOnMount: bool,
     name: string,
     placeholder: string,
     theme: string,

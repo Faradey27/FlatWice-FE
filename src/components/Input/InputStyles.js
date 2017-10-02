@@ -10,22 +10,9 @@ export default `
     border: none;
     font-size: 18px;
   }
-  .price-wrap {
+  .formField {
     width: 100%;
-  }
-  .price {
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    width: 100%;
-  }
-  .rooms-wrap {
-    width: 100%;
-  }
-  .rooms {
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    width: 100%;
+    padding: 11px;
+    font-size: 19px;
   }
 `;

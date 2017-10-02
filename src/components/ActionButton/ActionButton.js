@@ -1,10 +1,10 @@
 import { Component } from 'react';
-import { func, element, number, string, oneOfType } from 'prop-types';
+import { func, element, number, string, oneOfType, node } from 'prop-types';
 import styles from './ActionButtonStyles';
 
 class ActionButton extends Component {
   static propTypes = {
-    children: oneOfType([element, string]),
+    children: oneOfType([element, string, node]),
     dataTestId: string,
     marginLeft: number,
     theme: string,
