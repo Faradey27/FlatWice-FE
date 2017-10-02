@@ -3,7 +3,6 @@ import { l } from './../../i18n';
 
 import Logo from './../Logo';
 import Button from './../Button';
-import ActionButton from './../ActionButton';
 import Modal from './../Modal';
 import ModalHeader from './../ModalHeader';
 import ModalContent from './../ModalContent';
@@ -53,12 +52,13 @@ class HeaderBar extends Component {
           >
             {l('Log in')}
           </Button>
-          <ActionButton
+          <Button
             dataTestId="leaseApartment"
+            primary
             onClick={this.handleLeaseApartment}
           >
             {l('Lease apartment')}
-          </ActionButton>
+          </Button>
         </div>
         <Modal
           isOpen={this.state.isOpen}

@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import Link from 'next/link';
 import { l } from './../../i18n';
-import FacebookButton from './../FacebookButton';
-import GoogleButton from './../GoogleButton';
+import Button from './../Button';
 import Input from './../Input';
 
 import styles from './SignUpModalStyles';
@@ -15,8 +14,8 @@ class signUpModal extends Component {
         data-testid="signUpModal"
       >
         <div className="social-login">
-          <FacebookButton>{l('Sign up with Facebook')}</FacebookButton>
-          <GoogleButton>{l('Sign up with Google')}</GoogleButton>
+          <Button facebook>{l('Sign up with Facebook')}</Button>
+          <Button google>{l('Sign up with Google')}</Button>
         </div>
         <div className="or">{l('or')}</div>
         <div className="default-login">

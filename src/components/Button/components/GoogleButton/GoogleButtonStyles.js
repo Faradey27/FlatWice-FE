@@ -1,4 +1,4 @@
-import theme from './../../assets/theme';
+import theme from './../../../../assets/theme';
 
 export default `
   .google-button {

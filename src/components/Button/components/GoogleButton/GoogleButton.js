@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { func, element, string, oneOfType, node } from 'prop-types';
-import GoogleIcon from './../../assets/icons/GoogleIcon.svg';
+import GoogleIcon from './../../../../assets/icons/GoogleIcon.svg';
 import styles from './GoogleButtonStyles';
 
 class GoogleButton extends Component {

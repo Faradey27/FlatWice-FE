@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { l } from './../../../../i18n';
 
-import ActionButton from './../../../ActionButton';
+import Button from './../../../Button';
 import Input from './../../../Input';
 import SearcIcon from './../../../../assets/icons/Search.svg';
 import styles from './SearchFormStyles';
@@ -25,7 +25,7 @@ class SearchForm extends Component {
           />
         </label>
         <div className="action-button">
-          <ActionButton theme="accent">{l('Search')}</ActionButton>
+          <Button accent>{l('Search')}</Button>
         </div>
         <style jsx>{styles}</style>
       </form>

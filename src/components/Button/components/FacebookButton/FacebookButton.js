@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { func, element, string, oneOfType, node } from 'prop-types';
-import FacebookButtonIcon from './../../assets/icons/FacebookIcon.svg';
+import FacebookButtonIcon from './../../../../assets/icons/FacebookIcon.svg';
 import styles from './FacebookButtonStyles';
 
 class FacebookButton extends Component {

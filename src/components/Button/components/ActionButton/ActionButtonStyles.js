@@ -1,4 +1,4 @@
-import theme from './../../assets/theme';
+import theme from './../../../../assets/theme';
 
 export default `
   .action-button {
@@ -13,7 +13,7 @@ export default `
   }
 
   .action-button:hover {
-    background-color: color(${theme.secondaryColor} alpha(-15%));
+    background-color: rgba(43,109,89, 0.85);
   }
 
   .accent {
@@ -22,7 +22,7 @@ export default `
   }
 
   .accent:hover {
-    background-color: color(${theme.primaryColor} alpha(-15%)) !important;
+    background-color: rgba(255,107,107, 0.85) !important;
   }
 
   .secondary {

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { l } from './../../../../i18n';
 
-import ActionButton from './../../../ActionButton';
+import Button from './../../../Button';
 import ArrowDown from './../../../../assets/icons/ArrowDown.svg';
 import styles from './FiltersStyles';
 
@@ -25,41 +25,41 @@ class SearchForm extends Component {
   render() {
     return (
       <form className="filters-form">
-        <ActionButton
+        <Button
           marginLeft={-15}
-          theme="secondary"
+          secondary
         >
           {l('Price')}
           {getArrowIcon()}
-        </ActionButton>
-        <ActionButton
+        </Button>
+        <Button
           marginLeft={10}
-          theme="secondary"
+          secondary
         >
           {l('Number of rooms')}
           {getArrowIcon()}
-        </ActionButton>
-        <ActionButton
+        </Button>
+        <Button
           marginLeft={10}
-          theme="secondary"
+          secondary
         >
           {l('Localtion')}
           {getArrowIcon()}
-        </ActionButton>
-        <ActionButton
+        </Button>
+        <Button
           marginLeft={10}
-          theme="secondary"
+          secondary
         >
           {l('Choose location on map')}
           {getArrowIcon()}
-        </ActionButton>
-        <ActionButton
+        </Button>
+        <Button
           marginLeft={10}
-          theme="secondary"
+          secondary
         >
           {l('More filters')}
           {getArrowIcon()}
-        </ActionButton>
+        </Button>
         <style jsx>{styles}</style>
       </form>
     );
