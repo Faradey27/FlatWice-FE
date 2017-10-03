@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Link from 'next/link';
+import Link from './../Link';
 import { l } from './../../i18n';
 import Button from './../Button';
 import Input from './../Input';
@@ -34,7 +34,7 @@ class signUpModal extends Component {
         <div className="already-registered">
           {l('Already registered?')}{' '}
           <span className="link">
-            <Link to="/?modal=logIn">{l('Enter')}</Link>
+            <Link href="/?modal=logIn">{l('Enter')}</Link>
           </span>
         </div>
         <style jsx>{styles}</style>

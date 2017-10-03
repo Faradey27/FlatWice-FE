@@ -3,7 +3,7 @@ import { l } from './../../../../i18n';
 
 import Button from './../../../Button';
 import Input from './../../../Input';
-import SearcIcon from './../../../../assets/icons/Search.svg';
+import SearcIcon from './../../../../assets/icons/SearchIcon';
 import styles from './SearchFormStyles';
 
 class SearchForm extends Component {
@@ -14,7 +14,7 @@ class SearchForm extends Component {
           className="search"
           htmlFor="search-input"
         >
-          <div className="search-icon">
+          <div className="search-icon 2">
             <SearcIcon />
           </div>
           <Input

@@ -26,4 +26,8 @@ export default `
     width: 100%;
     position: relative;
   }
+
+  #i-search {
+    stroke: rgb(118, 118, 118);
+  }
 `;

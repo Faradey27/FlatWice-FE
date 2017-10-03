@@ -2,12 +2,12 @@ import { Component } from 'react';
 import { l } from './../../../../i18n';
 
 import Button from './../../../Button';
-import ArrowDown from './../../../../assets/icons/ArrowDown.svg';
+import ArrowDown from './../../../../assets/icons/ArrowDownIcon';
 import styles from './FiltersStyles';
 
 const getArrowIcon = () => (
   <div className="arrow">
-    {<ArrowDown />}
+    <ArrowDown />
     <style jsx>
       {`
         .arrow {

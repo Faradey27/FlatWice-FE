@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { func, element, string, oneOfType, node } from 'prop-types';
-import FacebookButtonIcon from './../../../../assets/icons/FacebookIcon.svg';
+import FacebookIcon from './../../../../assets/icons/FacebookIcon';
 import styles from './FacebookButtonStyles';
 
 class FacebookButton extends Component {
@@ -18,7 +18,7 @@ class FacebookButton extends Component {
         onClick={this.props.onClick}
       >
         <span id="2">
-          <FacebookButtonIcon />
+          <FacebookIcon />
           <span className="children">{this.props.children}</span>
         </span>
         <style jsx>{styles}</style>

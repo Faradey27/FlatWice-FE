@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { bool, func, element, oneOfType, string, number } from 'prop-types';
+import { bool, func, element, oneOfType, string, number, node } from 'prop-types';
 import ActionButton from './components/ActionButton';
 import FacebookButton from './components/FacebookButton';
 import GoogleButton from './components/GoogleButton';
@@ -8,7 +8,7 @@ import styles from './ButtonStyles';
 class Button extends Component {
   static propTypes = {
     accent: bool,
-    children: oneOfType([element, string]),
+    children: oneOfType([element, string, node]),
     dataTestId: string,
     facebook: bool,
     google: bool,

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { func, element, string, oneOfType, node } from 'prop-types';
-import GoogleIcon from './../../../../assets/icons/GoogleIcon.svg';
+import GoogleIcon from './../../../../assets/icons/GoogleIcon';
 import styles from './GoogleButtonStyles';
 
 class GoogleButton extends Component {
@@ -17,7 +17,7 @@ class GoogleButton extends Component {
         data-testid="googleButton"
         onClick={this.props.onClick}
       >
-        <span id={6}>
+        <span>
           <GoogleIcon />
           <span className="children">{this.props.children}</span>
         </span>
