@@ -1,4 +1,4 @@
-import { string, number } from 'prop-types';
+/* import { string, number } from 'prop-types';
 
 const ArrowUpIcon = ({ height, width, stroke }) => (
   <svg
@@ -27,4 +27,4 @@ ArrowUpIcon.propTypes = {
   width: number,
 };
 
-export default ArrowUpIcon;
+export default ArrowUpIcon;*/
