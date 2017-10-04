@@ -1,12 +1,20 @@
 import { mount } from 'enzyme';
+import mockedRouter from '../../../../__test__/utils/mockedRouter';
 import HeaderBar from './../index';
 
 export default class HeaderBarDriver {
   when = {
     created: (props) => {
-      this.component = mount(<HeaderBar
-        {...props}
-      />);
+      const router = mockedRouter.instance();
+
+      this.component = mount(
+        <HeaderBar
+          {...props}
+        />,
+        { context: { router } }
+      );
+
+      router.setComponent(this.component);
 
       return this;
     },

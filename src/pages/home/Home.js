@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import { array, object } from 'prop-types';
 import withRedux from 'next-redux-wrapper';
 import { loadTranslations, init, l } from './../../i18n';
@@ -14,7 +14,7 @@ import { FLATS_VIEW_ID, FLATS_ENDPOINT } from './../../constants/data';
 
 import styles from './HomeStyles';
 
-class Home extends Component {
+class Home extends PureComponent {
   static propTypes = {
     flats: array,
     localeData: object, // from async request in getInitialProps

@@ -1,4 +1,6 @@
 import { mount } from 'enzyme';
+import { object } from 'prop-types';
+import mockedRouter from '../../../../__test__/utils/mockedRouter';
 import MainLayout from './../index';
 
 export default class MainLayoutDriver {
@@ -6,7 +8,7 @@ export default class MainLayoutDriver {
     created: (props) => {
       this.component = mount(<MainLayout
         {...props}
-      />);
+      />, { context: { router: mockedRouter.instance() }, childContextTypes: { router: object } });
 
       return this;
     },

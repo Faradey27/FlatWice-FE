@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { shape, object } from 'prop-types';
+import { withRouter } from 'next/router';
 import { l } from './../../i18n';
 
 import Logo from './../Logo';
@@ -7,25 +9,30 @@ import Modal from './../Modal';
 import ModalHeader from './../ModalHeader';
 import ModalContent from './../ModalContent';
 import SignUpModal from './../SignUpModal';
+import LogInModal from './../LogInModal';
 import styles from './HeaderBarStyles';
 
 class HeaderBar extends Component {
-  state = {
-    isOpen: false,
+  static propTypes = {
+    router: shape({
+      query: object,
+    }),
   }
 
-  handleSignUp = () => this.setState({ isOpen: true, modalType: 'signUp' })
-  handleLogIn = () => this.setState({ isOpen: true, modalType: 'logIn' })
+  updateLocation = (href) => this.props.router.push(href, href, { shallow: true })
 
-  handleModalClose = () => this.setState({ isOpen: false })
+  handleLogIn = () => this.updateLocation('/?modal=logIn');
+  handleSignUp = () => this.updateLocation('/?modal=signUp');
+  handleModalClose = () => this.updateLocation('/');
 
   renderModalBody() {
+    const modalType = this.props.router.query.modal;
     const hash = {
       signUp: () => <SignUpModal />,
-      logIn: () => <div data-testid="logInModal" />,
+      logIn: () => <LogInModal />,
     };
 
-    return hash[this.state.modalType] ? hash[this.state.modalType]() : null;
+    return hash[modalType] ? hash[modalType]() : null;
   }
 
   render() {
@@ -61,7 +68,7 @@ class HeaderBar extends Component {
           </Button>
         </div>
         <Modal
-          isOpen={this.state.isOpen}
+          isOpen={Boolean(this.props.router.query.modal)}
           onRequestClose={this.handleModalClose}
         >
           <ModalContent>
@@ -75,4 +82,4 @@ class HeaderBar extends Component {
   }
 }
 
-export default HeaderBar;
+export default withRouter(HeaderBar);

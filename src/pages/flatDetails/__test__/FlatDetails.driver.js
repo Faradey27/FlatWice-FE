@@ -1,6 +1,8 @@
 import { mount } from 'enzyme';
+import { object } from 'prop-types';
 import FlatDetails from './../index';
 import { mockLocales } from './../../../../__test__/utils/mockedAxios';
+import mockedRouter from '../../../../__test__/utils/mockedRouter';
 
 const localeData = {
   en: require('./../../../assets/locales/en.json'),
@@ -16,7 +18,7 @@ export default class FlatDetailsDriver {
       this.component = mount(<FlatDetails
         localeData={localeData}
         {...props}
-      />);
+      />, { context: { router: mockedRouter.instance() }, childContextTypes: { router: object } });
 
       return this;
     },

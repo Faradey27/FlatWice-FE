@@ -4,18 +4,18 @@ import { l } from './../../i18n';
 import Button from './../Button';
 import Input from './../Input';
 
-import styles from './SignUpModalStyles';
+import styles from './LogInModalStyles';
 
 class signUpModal extends Component {
   render() {
     return (
       <div
-        className="signUpModal"
-        data-testid="signUpModal"
+        className="logInModal"
+        data-testid="logInModal"
       >
         <div className="social-login">
-          <Button facebook>{l('Sign up with Facebook')}</Button>
-          <Button google>{l('Sign up with Google')}</Button>
+          <Button facebook>{l('Log in with Facebook')}</Button>
+          <Button google>{l('Log in with Google')}</Button>
         </div>
         <div className="or">{l('or')}</div>
         <div className="default-login">
@@ -31,13 +31,13 @@ class signUpModal extends Component {
           />
         </div>
         <div className="divider"/>
-        <div className="already-registered">
-          {l('Already registered?')}{' '}
+        <div className="not-registered">
+          {l('Not registered?')}{' '}
           <span className="link">
             <Link
-              href="/?modal=logIn"
+              href="/?modal=signUp"
               shallow
-            ><a>{l('Enter')}</a></Link>
+            ><a>{l('Registration')}</a></Link>
           </span>
         </div>
         <style jsx>{styles}</style>
