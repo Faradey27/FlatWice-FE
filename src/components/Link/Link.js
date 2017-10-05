@@ -1,12 +1,16 @@
 import { Component } from 'react';
-import { string, node, oneOfType, boolean } from 'prop-types';
+import { string, node, oneOfType, bool } from 'prop-types';
 import Link from 'next/link';
 
 class LinkWrap extends Component {
   static propTypes = {
     children: oneOfType([string, node]).isRequired,
     href: string,
-    shallow: boolean,
+    shallow: bool,
+  }
+
+  static defaultProps = {
+    shallow: true,
   }
 
   render() {

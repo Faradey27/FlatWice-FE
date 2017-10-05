@@ -11,6 +11,7 @@ module.exports = (wallaby) => ({
     'src/**/*.js*',
     '__test__/utils/mockedStore.js',
     '__test__/utils/mockedAxios.js',
+    '__test__/utils/mockedRouter.js',
     'src/**/*.png',
     'src/**/*.svg',
     'node_modules/bytesize-icons/dist/icons/*.svg',

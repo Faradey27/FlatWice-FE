@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { node } from 'prop-types';
 import Head from 'next/head';
+import GoogleAnalytic from './../../utils/logger';
 import HeaderBar from './../../components/HeaderBar';
 import FooterBar from './../../components/FooterBar';
 import theme from './../../assets/theme';
@@ -8,6 +9,10 @@ import theme from './../../assets/theme';
 class MainLayout extends Component {
   static propTypes = {
     children: node,
+  }
+
+  componentDidMount() {
+    this.logger = new GoogleAnalytic();
   }
 
   render() {
