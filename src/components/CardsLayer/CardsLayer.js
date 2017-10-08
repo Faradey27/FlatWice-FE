@@ -1,9 +1,11 @@
 import { array } from 'prop-types';
 import FlatCard from './../FlatCard';
+import Filters from './../Filters';
 import styles from './CardsLayerStyles';
 
 const CardsLayer = ({ cards }) => (
   <div className="cardsLayerWrapper">
+    <Filters />
     <div
       className="cardsLayer"
       data-testid="cardsLayer"

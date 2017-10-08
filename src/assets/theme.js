@@ -13,6 +13,6 @@ export default {
   cardBoxShadow: '0 2px 6px -2px rgba(22,22,22,0.45)',
 
   phoneViewport: 'max-width: 470px',
-  smallViewport: 'max-width: 724px',
-  mediumViewport: 'max-width: 1024px',
+  smallViewport: 'max-width: 1200px',
+  mediumViewport: 'max-width: 1650px',
 };

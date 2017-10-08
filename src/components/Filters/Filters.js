@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import { l } from './../../../../i18n';
+import { l } from './../../i18n';
 
-import Button from './../../../Button';
-import ArrowDown from './../../../../assets/icons/ArrowDownIcon';
+import Button from './../Button';
+import ArrowDown from './../../assets/icons/ArrowDownIcon';
 import styles from './FiltersStyles';
 
 const getArrowIcon = () => (

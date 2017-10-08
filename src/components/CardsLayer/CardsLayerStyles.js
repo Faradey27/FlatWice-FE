@@ -2,13 +2,13 @@ import theme from './../../assets/theme';
 
 export default `
   .cardsLayer {
+    float: left;
+    position: relative;
     display: grid;
     grid-template-columns: calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px);
     grid-gap: 36px;
     justify-items: center;
     width: 100%;
-    max-width: 1246px;
-    padding: 0 60px;
   }
   @media (${theme.mediumViewport}) {
     .cardsLayer {
@@ -22,9 +22,12 @@ export default `
     }
   }
   .cardsLayerWrapper {
+    float: left;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 66%;
+    max-width: 1300px;
+    padding: 0 36px 0 60px;
   }
 `;

@@ -1,7 +1,7 @@
 import { PureComponent } from 'react';
 import { array, object } from 'prop-types';
 import withRedux from 'next-redux-wrapper';
-import { loadTranslations, init, l } from './../../i18n';
+import { loadTranslations, init } from './../../i18n';
 import createStore from './../../data/redux/create';
 import { loadEntities, selectEntitiesByViewId } from './../../data/redux/modules/entities';
 
@@ -43,15 +43,12 @@ class Home extends PureComponent {
           <div className="layer">
             <MainFiltersArea />
           </div>
-          <div className="layer">
-            <div className="title">
-              {l('Recommended flats for you')}
-            </div>
+          <div className="home-card-flats">
+            <CardsLayer
+              cards={this.props.flats}
+            />
+            <FlatMap />
           </div>
-          <CardsLayer
-            cards={this.props.flats}
-          />
-          <FlatMap />
         </div>
         <style jsx>{styles}</style>
       </MainLayout>
