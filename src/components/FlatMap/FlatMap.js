@@ -1,42 +1,13 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import GoogleMap from './../GoogleMap';
 import styles from './FlatMapStyles';
 
-class FlatMap extends Component {
-  state = {
-    isFixedPosition: false,
-    top: 0,
-  }
-
-  componentDidMount() {
-
-    /* window.addEventListener('scroll', () => {
-      const sTop = window.pageYOffset;
-
-      if (sTop >= this.node.offsetTop && !this.state.isFixedPosition) {
-        this.setState({
-          isFixedPosition: true,
-          top: sTop,
-        });
-      } else if (sTop < this.node.offsetTop && this.state.isFixedPosition) {
-        this.setState({
-          isFixedPosition: false,
-          top: 0,
-        });
-      }
-    });*/
-  }
-
-  setDomNode = (node) => {
-    this.node = node;
-  }
-
+class FlatMap extends PureComponent {
   render() {
     return (
       <div
         className="flatMap"
         data-testid="flatMap"
-        ref={this.setDomNode}
       >
         <div className="flatMap-wrapper">
           <div
