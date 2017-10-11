@@ -15,4 +15,8 @@ export default {
   phoneViewport: 'max-width: 470px',
   smallViewport: 'max-width: 1200px',
   mediumViewport: 'max-width: 1650px',
+
+
+  mobile: 'max-width: 600px',
+  smallMobile: 'max-width: 340px',
 };

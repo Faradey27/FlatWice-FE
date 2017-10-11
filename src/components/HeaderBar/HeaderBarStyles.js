@@ -9,4 +9,14 @@ export default `
     padding: 0 10px;
     box-shadow: ${theme.boxShadow};
   }
+
+  .leaseApartment {
+    display: inline-block;
+  }
+
+  @media (${theme.mobile}) {
+    .leaseApartment {
+      display: none;
+    }
+  }
 `;

@@ -14,7 +14,7 @@ class SearchForm extends Component {
           className="search"
           htmlFor="search-input"
         >
-          <div className="search-icon 2">
+          <div className="search-icon">
             <SearcIcon />
           </div>
           <Input

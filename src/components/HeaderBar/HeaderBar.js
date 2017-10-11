@@ -59,13 +59,15 @@ class HeaderBar extends Component {
           >
             {l('Log in')}
           </Button>
-          <Button
-            dataTestId="leaseApartment"
-            primary
-            onClick={this.handleLeaseApartment}
-          >
-            {l('Lease apartment')}
-          </Button>
+          <div className="leaseApartment">
+            <Button
+              dataTestId="leaseApartment"
+              primary
+              onClick={this.handleLeaseApartment}
+            >
+              {l('Lease apartment')}
+            </Button>
+          </div>
         </div>
         <Modal
           isOpen={Boolean(this.props.router.query.modal)}

@@ -30,4 +30,24 @@ export default `
     max-width: 1300px;
     padding: 0 36px 0 60px;
   }
+
+  @media (${theme.mobile}) {
+    .cardsLayerWrapper {
+      padding: 0 18px;
+      width: 100%;
+    }
+    .cardsLayer {
+      padding: 0 18px;
+    }
+  }
+
+  @media (${theme.smallMobile}) {
+    .cardsLayerWrapper {
+      padding: 0 9px;
+      width: 100%;
+    }
+    .cardsLayer {
+      padding: 0 9px;
+    }
+  }
 `;

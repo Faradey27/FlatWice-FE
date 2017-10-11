@@ -14,7 +14,7 @@ class ActionButton extends Component {
   render() {
     return (
       <button
-        className={`action-button ${this.props.theme}`}
+        className={`action-button ${this.props.theme} ${this.props.dataTestId}`}
         data-testid={this.props.dataTestId || 'actionButton'}
         style={{ marginLeft: this.props.marginLeft }}
         onClick={this.props.onClick}

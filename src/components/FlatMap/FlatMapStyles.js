@@ -1,3 +1,5 @@
+import theme from './../../assets/theme';
+
 export default `
   .flatMap {
     vertical-align: top;
@@ -13,5 +15,11 @@ export default `
     width: 100%;
     height: 100vh;
     background: #eeeeee;
+  }
+
+  @media (${theme.mobile}) {
+    .flatMap {
+      display: none;
+    }
   }
 `;

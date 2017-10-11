@@ -18,7 +18,6 @@ export default `
     display: flex;
     align-items: center;
     font-size: 19px;
-    min-width: 400px;
     color: ${theme.defaultColor};
     border-radius: 4px;
     border: 1px solid ${theme.borderColor};
@@ -27,5 +26,11 @@ export default `
     height: 60px;
     width: 100%;
     position: relative;
+  }
+
+  @media (${theme.smallMobile}) {
+    .action-button {
+      display: none;
+    }
   }
 `;
