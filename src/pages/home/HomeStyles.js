@@ -19,7 +19,7 @@ export default `
     position: relative;
     width: 100%;
   }
-  @media (${theme.mobile}) {
+  @media (${theme.tablet}) {
     .home-card-flats {
       display: flex;
     }

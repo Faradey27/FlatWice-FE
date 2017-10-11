@@ -7,6 +7,16 @@ export default `
     padding-bottom: 15px;
   }
 
+  @media (${theme.tablet}) {
+    .filters-form {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .choose-location-map {
+      display: none;
+    }
+  }
+
   @media (${theme.mobile}) {
     .filters-form {
       display: none;

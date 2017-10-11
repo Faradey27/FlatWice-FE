@@ -46,13 +46,15 @@ class SearchForm extends Component {
           {l('Localtion')}
           {getArrowIcon()}
         </Button>
-        <Button
-          marginLeft={10}
-          secondary
-        >
-          {l('Choose location on map')}
-          {getArrowIcon()}
-        </Button>
+        <div className="choose-location-map">
+          <Button
+            marginLeft={10}
+            secondary
+          >
+            {l('Choose location on map')}
+            {getArrowIcon()}
+          </Button>
+        </div>
         <Button
           marginLeft={10}
           secondary

@@ -17,7 +17,7 @@ export default `
     background: #eeeeee;
   }
 
-  @media (${theme.mobile}) {
+  @media (${theme.tablet}) {
     .flatMap {
       display: none;
     }

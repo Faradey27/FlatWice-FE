@@ -10,17 +10,6 @@ export default `
     justify-items: center;
     width: 100%;
   }
-  @media (${theme.mediumViewport}) {
-    .cardsLayer {
-      grid-template-columns: calc(50% - 18px) calc(50% - 18px);
-    }
-  }
-  @media (${theme.smallViewport}) {
-    .cardsLayer {
-      grid-template-columns: 100%;
-      padding: 0 36px;
-    }
-  }
   .cardsLayerWrapper {
     float: left;
     display: flex;
@@ -31,12 +20,25 @@ export default `
     padding: 0 36px 0 60px;
   }
 
+  @media (${theme.tablet}) {
+    .cardsLayerWrapper {
+      width: 100%;
+      padding: 0 0px;
+    }
+    .cardsLayer {
+      grid-template-columns: calc(50% - 18px) calc(50% - 18px);
+      grid-gap: 18px;
+      padding: 0 12px;
+    }
+  }
+
   @media (${theme.mobile}) {
     .cardsLayerWrapper {
       padding: 0 18px;
       width: 100%;
     }
     .cardsLayer {
+      grid-template-columns: 100%;
       padding: 0 18px;
     }
   }
