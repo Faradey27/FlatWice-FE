@@ -14,7 +14,13 @@ export default `
     display: inline-block;
   }
 
-  @media (${theme.mobile}) {
+  @media ${theme.mobileL} {
+    .leaseApartment {
+      display: none;
+    }
+  }
+
+  @media ${theme.mobileM} {
     .leaseApartment {
       display: none;
     }

@@ -17,7 +17,22 @@ export default `
     background: #eeeeee;
   }
 
-  @media (${theme.tablet}) {
+  @media ${theme.laptop} {
+    .flatMap {
+      display: none;
+    }
+  }
+  @media ${theme.tablet} {
+    .flatMap {
+      display: none;
+    }
+  }
+  @media ${theme.mobileL} {
+    .flatMap {
+      display: none;
+    }
+  }
+  @media ${theme.mobileM} {
     .flatMap {
       display: none;
     }

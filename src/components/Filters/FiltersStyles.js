@@ -7,7 +7,20 @@ export default `
     padding-bottom: 15px;
   }
 
-  @media (${theme.tablet}) {
+  @media ${theme.laptopL} {
+    .choose-location-map {
+      display: none;
+    }
+  }
+
+  @media ${theme.laptop} {
+    .filters-form {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  @media ${theme.tablet} {
     .filters-form {
       padding-left: 12px;
       padding-right: 12px;
@@ -17,7 +30,12 @@ export default `
     }
   }
 
-  @media (${theme.mobile}) {
+  @media ${theme.mobileL} {
+    .filters-form {
+      display: none;
+    }
+  }
+  @media ${theme.mobileM} {
     .filters-form {
       display: none;
     }

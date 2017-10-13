@@ -28,7 +28,7 @@ export default `
     position: relative;
   }
 
-  @media (${theme.smallMobile}) {
+  @media ${theme.mobileM} {
     .action-button {
       display: none;
     }

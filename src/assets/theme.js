@@ -12,10 +12,11 @@ export default {
   boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
   cardBoxShadow: '0 2px 6px -2px rgba(22,22,22,0.45)',
 
-  mediumViewport: 'max-width: 1650px',
+  laptopXL: '(min-width: 1441px)',
+  laptopL: '(max-width: 1440px) and (min-width: 1024px)',
+  laptop: '(max-width: 1024px) and (min-width: 768px)',
+  tablet: '(max-width: 768px) and (min-width: 640px)',
 
-
-  tablet: 'max-width: 768px',
-  mobile: 'max-width: 640px',
-  smallMobile: 'max-width: 340px',
+  mobileL: '(max-width: 640px) and (min-width: 375px)',
+  mobileM: '(max-width: 375px)',
 };

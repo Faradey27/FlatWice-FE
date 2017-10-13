@@ -20,7 +20,42 @@ export default `
     padding: 0 36px 0 60px;
   }
 
-  @media (${theme.tablet}) {
+  @media ${theme.laptopXL} {
+    .cardsLayer {
+      grid-template-columns: calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px) calc(8/24 * 100% - 24px);
+      grid-gap: 18px;
+    }
+    .cardsLayerWrapper {
+      padding: 0 0 0 18px;
+      width: 70%;
+    }
+  }
+
+  @media ${theme.laptopL} {
+    .cardsLayerWrapper {
+      width: 60%;
+    }
+    .cardsLayer {
+      grid-template-columns: calc(50% - 9px) calc(50% - 9px);
+      justify-items: start;
+      grid-gap: 36px;
+    }
+  }
+
+  @media ${theme.laptop} {
+    .cardsLayerWrapper {
+      width: 100%;
+      padding: 0;
+    }
+    .cardsLayer {
+      grid-template-columns: calc(50% - 9px) calc(50% - 9px);
+      justify-items: start;
+      grid-gap: 18px;
+      padding: 0 18px;
+    }
+  }
+
+  @media ${theme.tablet} {
     .cardsLayerWrapper {
       width: 100%;
       padding: 0 0px;
@@ -32,9 +67,9 @@ export default `
     }
   }
 
-  @media (${theme.mobile}) {
+  @media ${theme.mobileL} {
     .cardsLayerWrapper {
-      padding: 0 18px;
+      padding: 0;
       width: 100%;
     }
     .cardsLayer {
@@ -43,12 +78,13 @@ export default `
     }
   }
 
-  @media (${theme.smallMobile}) {
+  @media ${theme.mobileM} {
     .cardsLayerWrapper {
-      padding: 0 9px;
+      padding: 0;
       width: 100%;
     }
     .cardsLayer {
+      grid-template-columns: 100%;
       padding: 0 9px;
     }
   }
