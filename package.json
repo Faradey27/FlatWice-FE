@@ -16,7 +16,8 @@
     "test:e2e": "webdriver-manager update && protractor",
     "analyze": "cross-env ANALYZE=1 npm run build",
     "locales:po": "sh ./locales/extract_lang.sh",
-    "locales:json": "sh ./locales/po2json.sh"
+    "locales:json": "sh ./locales/po2json.sh",
+    "deploy": "sh ./scripts/deploy.sh"
   },
   "jest": {
     "setupFiles": [
